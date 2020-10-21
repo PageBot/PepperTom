@@ -16,17 +16,32 @@
 #   This ThemeColors.py shows samples of all standard theme colors,
 #   with their closest spot color, CMYK, RGB, CSS hex-color and CSS name.
 #
+import os
+
 from pagebotnano_060.toolbox.markdown import parseMarkdownFile
+from pagebotnano_060.templates.templated import Templated
+from pagebotnano_060.themes import BackToTheCity
+from pagebotnano_060.publications.website import Website
 
+markdownPath = 'PepperTom.md'
+templatePath = 'templates/templated-hielo'
 
-PATH = 'PepperTom.md'
+theme = BackToTheCity()
 
-pages = parseMarkdownFile(PATH)
+siteName = 'peppertom'
 
-print(pages)
+# Create a Website publications with this theme and templates
+templates = Templated(templatePath)
+website = Website(theme=theme, templates=templates)
 
-page = pages['home']
+# Get dictionary if pages[pageData.id] = pageData
+pages = parseMarkdownFile(markdownPath)
 
-print(page.elementData)
+# Compose the website with this content.
+website.compose(pages)
+
+# Start MAMP to see this website on localhost, port 80
+website.export(website.MAMP_PATH + siteName) 
+os.system(u'/usr/bin/open %s' % 'http:localhost/' + siteName)
 
 print('Done')
