@@ -1,7 +1,27 @@
-# Logo
 
-![logo](images/peppertom_magenta_orange.png)
+<site> Pepper+Tom
 
+<logo>
+
+![logo](images/logos/peppertom_magenta_orange.png)
+
+<page index>
+
+<background 3> 
+<image 1>
+
+![](images/scarfs/groen1-1.jpg)
+
+<content>
+
+# Products
+
+# Skirts
+
+<page home>
+
+<content>
+	
 # Products
 
 ## Desirable products
