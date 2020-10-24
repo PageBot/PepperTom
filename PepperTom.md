@@ -7,7 +7,11 @@
 
 <page index>
 
+<copyright>
+Pepper+Tom
+
 <background 3> 
+
 <image 1>
 
 ![](images/scarfs/groen1-1.jpg)
