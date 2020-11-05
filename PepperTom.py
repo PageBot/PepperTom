@@ -43,6 +43,7 @@ from pagebotnano_060.themes import BackToTheCity
 from pagebotnano_060.toolbox.markdown import parseMarkdownFile
 from pagebotnano_060.publications.website import Website
 
+PORT = 8888
 markdownPath = 'PepperTom.md'
 templatePath = 'templated-hielo'
 
@@ -52,7 +53,8 @@ siteName = 'peppertom'
 
 # Create a Website publications with this theme and templates
 templates = Templated(templatePath)
-website = Website(theme=theme, templates=templates)
+print(templates.path)
+website = Website(theme=theme, templates=templates, port=PORT)
 
 # Get dictionary if pages[pageData.id] = pageData
 pageData = parseMarkdownFile(markdownPath)
