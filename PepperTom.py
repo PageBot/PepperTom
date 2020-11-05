@@ -11,20 +11,40 @@
 #   Supporting DrawBot, www.drawbot.com
 # -----------------------------------------------------------------------------
 #
-#   ThemeSpecimens.py
+#   PepperTom.py
 #
-#   This ThemeColors.py shows samples of all standard theme colors,
-#   with their closest spot color, CMYK, RGB, CSS hex-color and CSS name.
+#   Source builds the PepperTom.com website using PageBotNano the Website 
+#   publication class.
 #
-import os
+"""
+    >>> theme = BackToTheCity()
+    >>> title = randomTitle()
+    >>> author = randomName()
+    >>> siteName = 'pagebotnano_demo'
+    >>> pageData = parseMarkdownFile('../../TestPageContent.md')
+    >>> #pageData = parseMarkdownFile('../../PublishingVariables.md')
+    >>> templatePath = 'templated-hielo'
+    >>> templates = Templated(templatePath)
+    >>> website = Website(theme=theme, templates=templates)
+    >>> website.templates is templates
+    True
+    >>> website.compose(pageData)
+    >>> # Start MAMP to see this website on localhost, port 80
+    >>> website.export(website.MAMP_PATH + siteName)
+    >>> url = 'http:localhost:%d/%s' % (website.PORT or 80, siteName) 
+    >>> result = os.system(u'/usr/bin/open %s' % url)
+"""
 
-from pagebotnano_060.toolbox.markdown import parseMarkdownFile
+
+import os
+from pagebotnano_060.toolbox.loremipsum import loremipsum, randomName, randomTitle
 from pagebotnano_060.templates.templated import Templated
 from pagebotnano_060.themes import BackToTheCity
+from pagebotnano_060.toolbox.markdown import parseMarkdownFile
 from pagebotnano_060.publications.website import Website
 
 markdownPath = 'PepperTom.md'
-templatePath = 'templates/templated-hielo'
+templatePath = 'templated-hielo'
 
 theme = BackToTheCity()
 
@@ -35,10 +55,10 @@ templates = Templated(templatePath)
 website = Website(theme=theme, templates=templates)
 
 # Get dictionary if pages[pageData.id] = pageData
-pages = parseMarkdownFile(markdownPath)
+pageData = parseMarkdownFile(markdownPath)
 
 # Compose the website with this content.
-website.compose(pages)
+website.compose(pageData)
 
 # Start MAMP to see this website on localhost, port 80
 website.export(website.MAMP_PATH + siteName) 
