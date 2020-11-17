@@ -46,35 +46,50 @@ sd.menuLinks = True # Force call to template._menuLinks()
 p = sd.newPage(id='index', title='Home', template='index')
 
 # Page index, banner
+t1 = 'Pepper+Tom pop-up!'
+t2 = 'Pepper+Tom is inviting you!'
+
+dk1 = 'Leftovers, from several editions of small series of skirts, pants and scarves for high end stores, are waiting for you.'
+dk2 = 'I would love to bring all these beautiful handmade or semi- couture garments into the world. Together we will make an attractive price ;) '
+dk3 = 'Call or email me for an appointment in my studio in Delft. Come by yourself or with maximum two others. '
+dk4 = 'The skirts and pants are all different, every piece is unique. there’s a variety of sizes from XXS to XL. Which one will be yours?!'
+dk5 = 'The scarves will always fit. Or as a gift for yourself or for someone else.'
+dk6 = 'Looking forward seeing you!'
+
+st1 = 'Leftovers, from several editions of small series'
+st2 = 'Together we will make an attractive price'
+st3 = 'Call or email me for an appointment in my studio in Delft'
+st4 = 'Every piece is unique'
+st5 = 'The scarves will always fit'
+st6 = dk6
 
 p.bannerSlideShow = True
+sd.bannerSlideShowHeadSize = '5rem' # Set to siteData
+sd.bannerSlideShowHeadSizeColor = color(1, 0, 0) #sd.theme.getColor('main text')
+
 p.bannerImage_1 = 'images/skirts/static1.squarespace.jpg'
-p.bannerTitle_1 = 'Laatste rokken'
-p.bannerSubtitle_1 = 'Er zijn er nog een paar'
+p.bannerTitle_1 = t1
+p.bannerSubtitle_1 = st1
 
 p.bannerImage_2 = 'images/studio/IMG_9581.jpg'
-p.bannerTitle_2 = 'There are still scarfs'
-p.bannerSubtitle_2 = 'Get them in the shop'
+p.bannerTitle_2 = t2
+p.bannerSubtitle_2 = st2
 
 p.bannerImage_3 = 'images/studio/IMG_9473.jpg'
-p.bannerTitle_3 = 'Title 3'
-p.bannerSubtitle_3 = 'My Banner 3@'
+p.bannerTitle_3 = t1
+p.bannerSubtitle_3 = st3
 
 p.bannerImage_4 = 'images/studio/IMG_9557.jpg'
-p.bannerTitle_4 = 'Title 4'
-p.bannerSubtitle_4 = 'My Banner 4@'
+p.bannerTitle_4 = t2
+p.bannerSubtitle_4 = st4
 
 p.bannerImage_5 = 'images/studio/IMG_9563.jpg'
-p.bannerTitle_5 = 'Title 5'
-p.bannerSubtitle_5 = 'My Banner 5@'
+p.bannerTitle_5 = t1
+p.bannerSubtitle_5 = st5
 
 p.bannerImage_6 = 'images/studio/IMG_9566.jpg'
-p.bannerTitle_6 = 'Title 6'
-p.bannerSubtitle_6 = 'My Banner 6@'
-
-p.bannerImage_7 = 'images/studio/IMG_9571.jpg'
-p.bannerTitle_7 = 'Title 7'
-p.bannerSubtitle_7 = 'My Banner 7@'
+p.bannerTitle_6 = t2
+p.bannerSubtitle_6 = st6
 
 # Page index, subscriptionForm
 
@@ -115,6 +130,12 @@ Generous Gesture has been nominated for the German Design Award 2012.
 Generous Gesture is a people project. Every piece we make is 100% fair trade. The principle op Generous Gesture is creating fair trade with sustainable products. Through an exchange of ideas and skills we create a win-win situation for all concerned parties. 
 """
 p.articleFooter_2 = 'Footer of article 2'
+
+# Page index, deck
+
+p.deck = True # Trigger the template method
+p.deckImage = 'images/notes/IMG_0929.jpeg'
+p.deckHead = 'Deck heading' 
 
 # Page index, pullquote
 
