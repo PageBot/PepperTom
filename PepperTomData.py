@@ -16,11 +16,21 @@ from pagebotnano_060.toolbox.dating import now
 from pagebotnano_060.themes import *
 from pagebotnano_060.toolbox.color import color
 
-class PepperTomTheme(HappyHolidays):
+#    BackToTheCity
+#    BusinessAsUsual
+#    FairyTales
+#    FreshAndShiny
+#    HappyHolidays
+#    IntoTheWoods
+#    SeasoningTheDish
+#    SomethingInTheAir
+#    WordlyWise
 
-	logo1 = color(1)
-	logo2 = color(1, 0, 0) # Red
-	logo3 = color(0xEC842C)
+class PepperTomTheme(IntoTheWoods):
+
+    logo1 = color(1)
+    logo2 = color(1, 0, 0) # Red
+    logo3 = color(0xEC842C)
 
 theme = PepperTomTheme()
 
@@ -28,26 +38,59 @@ siteData = sd = SiteData(id='peppertom', title='Pepper+Tom', theme=theme)
 sd.menuName = 'Menu'
 sd.year = now().year
 sd.copyright = ' | '.join((
-	'<a href="https://peppertom.com" target="external">Pepper+Tom</a>',
-	'<a href="https://typetr.typenetwork.com">TYPETR</a>',
-	'<a href="https://designdesign.space">DesignDesign.Space</a>'))
+    '<a href="https://peppertom.com" target="external">Pepper+Tom</a>',
+    '<a href="https://typetr.typenetwork.com">TYPETR</a>',
+    '<a href="https://designdesign.space">DesignDesign.Space</a>'))
 sd.fontFamily = 'Upgrade'
 sd.logo = """<span style="color:#%s;">|</span><span style="color:#%s">d</span><span style="color: #%s;">|</span>""" % (theme.logo2.hex, theme.logo1.hex, theme.logo3.hex)
 
 sd.fontsCss = True
 sd.fontFamily = 'Upgrade'
+sd.headFont = sd.fontFamily + '-Regular'
+sd.bodyFont = sd.fontFamily + '-Book'
 sd.logoFontFamily = 'PepperTom'
 sd.monoFontFamily = 'Courier New'
 sd.iconFontFamily = 'FontAwesome'
 sd.menuLinks = True # Force call to template._menuLinks()
 
+sd.bodyText2Color = sd.theme.getColor('main text')
+sd.bodyText2Size = '1.3rem'
+sd.bodyText2Leading = '1.6rem'
+sd.bodyText2Font = sd.bodyFont
+
+sd.fonts = (
+    'Hairline',
+    'Hairline_Italic',
+    'Thin',
+    'Thin_Italic',
+    'Light',
+    'Light_Italic',
+    'Book',
+    'Book_Italic',
+    'Regular',
+    'Italic',
+    'Medium',
+    'Medium_Italic',
+    'Semibold',
+    'Semibold_Italic',
+    'Bold',
+    'Bold_Italic',
+    'Black',
+    'Black_Italic',
+    'ExtraBlack',
+    'ExtraBlack_Italic',
+    'UltraBlack',
+    'UltraBlack_Italic',
+)
+
+# -----------------------------------------------------------------------------
 # Page index
 
 p = sd.newPage(id='index', title='Home', template='index')
 
 # Page index, banner
 t1 = 'Pepper+Tom pop-up!'
-t2 = 'Pepper+Tom is inviting you!'
+t2 = 'P+T invites you!'
 
 dk1 = 'Leftovers, from several editions of small series of skirts, pants and scarves for high end stores, are waiting for you.'
 dk2 = 'I would love to bring all these beautiful handmade or semi- couture garments into the world. Together we will make an attractive price ;) '
@@ -63,9 +106,51 @@ st4 = 'Every piece is unique'
 st5 = 'The scarves will always fit'
 st6 = dk6
 
+articleFashion = """Where do clothing and fabrics come from? Who made them and under what circumstances? Often there is no answer to these questions, even when asking them in expensive stores. 
+
+Wouldn’t it be nice to wear clothes where it is clear who made them? Where the conditions of fabrication are good and the trade is fair? 
+
+Pepper+Tom wants that, sharing experience, collaborating with partners in the clothing chain, who think and act the same way. To make the production, resources and materials traceable for every garment. Pepper+Tom supports the idea of ‘true cost’ and ‘slow fashion’, adding to the pleasure of wearing the clothes.
+"""
+
+articleScarves = """The scarves are the result of many peoples’ work and creativity from rural Bangladesh to the cities of the Netherlands and the shores of the United States. 
+
+Beautiful women of Bangladesh embroider the scarves by using the traditional Nakshi Kantha technique. The silk of the scarves is made of the best quality, Rajshahi Silk. The fabric is embossed in a workplace in Dhaka and embroidered in Dinajpur, a poor region in the northwest of Bangladesh. 
+
+All under supervision of Kumudini Welfare Trust of Bengal. This NGO is part of the World Fair Trade Forum and Ecota Fair Trade Forum. In 2008 they received the Award of Excellence for Handicrafts South Asia from Unesco. 
+
+Under the name of Generous Gesture, the scarves have won a Bronze Award for the European Design Award 2010 in the category ‘Self Initiated Projects’ 
+
+Generous Gesture has been nominated for the German Design Award 2012. 
+
+Generous Gesture is a people project. Every piece we make is 100% fair trade. The principle op Generous Gesture is creating fair trade with sustainable products. Through an exchange of ideas and skills we create a win-win situation for all concerned parties. 
+"""
+
+articleSkirts = """Pepper+Tom skirts are perfect basic items that should not be missing in your wardrobe. They are designed in various sizes, fabrics (cotton, silk and wool) different lengths and delicately fınished with a colored zipper. The skirts are made from sustainable fabrics. Semi couture by a Dutch Atelier. 
+
+Confıdent women accentuate their individuality with their outfıt. Tough boots under a fashionable skirt. High heels under a loose dress or pants. They combine stylish and tough. They choose for comfort above catwalk, appreciating beautiful and well-made garments. They opt for Pepper+Tom. 
+
+Quote’s by Pepper+Tom customers: ‘It’s a simple style, good model, clear!’ ‘I can wear it all day, all night, everywhere’ ‘Very flattering to many fıgure types’ 
+
+Pepper+Tom would like to say to all women: ‘Just keep dancing!’ 
+
+All skirts have a A-line. There are three different lengths. Skirts with and without waistbands. Iconic, centerpiece items: Last for ever!
+"""
+
+articlePants = """The fabric of these pants has been produced by the best craftsmen of Kumudini Welfare Trust of Bengal. Beautiful women who live in Dinajpur, a poor region in the northwest of Bangladesh, have mastered the traditional embroidery technique Nakshi Kantha. This is a running stitch technique entirely embroidered by hand. The fabrics of the pants are or cotton double layered, or a combination of cotton and silk. The fabrics are natural dyed. Small inconsistencies are characteristics of the handcrafted process. The pants are feminine and cool. You can wear them chic, classic and casual, They will mix and match with your wardrobe for almost every occasion. We hope you will wear them with joy and happiness.
+
+All pants have wide legs. The pants with or without a waistband. All very comfortable to wear. Iconic, centerpiece items:Timeless!
+
+The pants are produced in a Dutch atelier, piece by piece. 
+### Wash instruction 
+Handle with love and care, wash gently only hand-wash, ironing, do not bleach, no tumble-dry, chemical cleaning.
+"""
+
 p.bannerSlideShow = True
 sd.bannerSlideShowHeadSize = '5rem' # Set to siteData
-sd.bannerSlideShowHeadSizeColor = color(1, 0, 0) #sd.theme.getColor('main text')
+sd.bannerSlideShowHeadSizeColor = sd.theme.getColor('main text diap')
+sd.bannerSlideShowSubheadSize = '1.2rem'
+sd.bannerSlideShowSubheadColor = sd.theme.getColor('main text diap', a=0.7)
 
 p.bannerImage_1 = 'images/skirts/static1.squarespace.jpg'
 p.bannerTitle_1 = t1
@@ -99,43 +184,56 @@ p.subscriptionFormHead = 'Yes, I am interested, ...'
 # Page index, article 1
 
 p.imagesArticle = True # Trigger the template._imagesArticle call
-p.articleImage_1 = 'images/scarfs/groen1-1.jpg'
-p.articleSubhead_1 = 'Last ones in stock'
-p.articleHead_1 = 'Skirts'
-p.article_1 = """Pepper+Tom skirts are perfect basic items that should not be 
-missing in your wardrobe. They are designed in various sizes, fabrics (cotton, silk and wool) different lengths and delicately fınished with a colored zipper. The skirts are made from sustainable fabrics. Semi couture by a Dutch Atelier. 
+sd.articleHeadSize = '2rem';
+sd.articleHeadColor = sd.theme.getColor('accent text')
+sd.articleSubheadSize = '1.5rem';
+sd.articleSubheadColor = sd.articleHeadColor
 
-Confıdent women accentuate their individuality with their outfıt. Tough boots under a fashionable skirt. High heels under a loose dress or pants. They combine stylish and tough. They choose for comfort above catwalk, appreciating beautiful and well-made garments. They opt for Pepper+Tom. 
-
-Quote’s by Pepper+Tom customers: ‘It’s a simple style, good model, clear!’ ‘I can wear it all day, all night, everywhere’ ‘Very flattering to many fıgure types’ 
-
-Pepper+Tom would like to say to all women: ‘Just keep dancing!’ 
-
-All skirts have a A-line. There are three different lengths. Skirts with and without waistbands. Iconic, centerpiece items: Last for ever!
-"""
-p.articleFooter_1 = 'Footer of article 1'
+p.articleImage_1 = 'images/studio/IMG_9563.jpg'
+p.articleSubhead_1 = 'Article subhead 1'
+p.articleHead_1 = 'Desirable fabrics & fashion'
+p.articleText_1 = articleFashion
+p.articleFooter_1 = dk2
 
 # Page index, article 2
 
-p.articleImage_2 = 'images/scarfs/goud1-1.jpg'
-p.articleSubhead_2 = 'Last ones in stock'
+p.articleImage_2 = 'images/scarfs/_scarf_silver_02.jpg'
+p.articleSubhead_2 = 'Article subhead 2'
 p.articleHead_2 = 'Scarves'
-p.article_2 = """The scarves are the result of many peoples’ work and creativity from rural Bangladesh to the cities of the Netherlands and the shores of the United States. 
-Beautiful women of Bangladesh embroider the scarves by using the traditional Nakshi Kantha technique. The silk of the scarves is made of the best quality, Rajshahi Silk. The fabric is embossed in a workplace in Dhaka and embroidered in Dinajpur, a poor region in the northwest of Bangladesh. 
+p.articleText_2 = articleScarves
+p.articleFooter_2 = dk3
 
-All under supervision of Kumudini Welfare Trust of Bengal. This NGO is part of the World Fair Trade Forum and Ecota Fair Trade Forum. In 2008 they received the Award of Excellence for Handicrafts South Asia from Unesco. 
+# Page index, article 3
 
-Under the name of Generous Gesture, the scarves have won a Bronze Award for the European Design Award 2010 in the category ‘Self Initiated Projects’ 
-Generous Gesture has been nominated for the German Design Award 2012. 
-Generous Gesture is a people project. Every piece we make is 100% fair trade. The principle op Generous Gesture is creating fair trade with sustainable products. Through an exchange of ideas and skills we create a win-win situation for all concerned parties. 
-"""
-p.articleFooter_2 = 'Footer of article 2'
+p.imagesArticle = True # Trigger the template._imagesArticle call
+p.articleImage_3 = 'images/skirts/IMG_0091_1.jpg'
+p.articleSubhead_3 = 'Article subhead 3'
+p.articleHead_3 = 'Skirts'
+p.articleText_3 = articleFashion
+p.articleFooter_3 = dk4
+
+# Page index, article 4
+
+p.articleImage_4 = 'images/notes/IMG_0936.jpeg'
+p.articleSubhead_4 = 'Article subhead 4'
+p.articleHead_4 = 'Pants'
+p.articleText_4 = articlePants
+p.articleFooter_4 = dk5
 
 # Page index, deck
 
+sd.deckFont = 'Upgrade-Light_Italic'
+sd.deckFontSize = '4rem'
+sd.deckFontLeading = '1.2em'
+sd.deckFontColor = sd.theme.getColor('main text diap')
+
 p.deck = True # Trigger the template method
 p.deckImage = 'images/notes/IMG_0929.jpeg'
-p.deckHead = 'Deck heading' 
+p.deckHead = dk1
+
+p.deck_1 = True # Trigger the template method
+p.deckImage_1 = 'images/notes/IMG_0929.jpeg'
+p.deckHead_1 = dk2
 
 # Page index, pullquote
 
@@ -155,123 +253,19 @@ p.galleryImage_3 = 'images/notes/IMG_0933.jpeg'
 p.galleryImage_4 = 'images/notes/IMG_0934.jpeg'
 p.galleryImage_5 = 'images/notes/IMG_0935.jpeg'
 p.galleryImage_6 = 'images/notes/IMG_0936.jpeg'
+  
 
-# Page otherpage
-
-p = sd.newPage('otherpage', 'Other Page', 'article')
-
-p.imagesArticle = False # Ignore these in the template
-p.pullQuote = False
-
-p.bannerSlideShow = True
-p.bannerImage_1 = 'images/lookbook/IMG_2458.JPG'
-p.bannerTitle_1 = 'Laatste rokken'
-p.bannerSubtitle_1 = 'Er zijn er nog een paar'
-
-p.bannerImage_2 = 'images/lookbook/IMG_2361.JPG'
-p.bannerTitle_2 = 'Title 2'
-p.bannerSubtitle_2 = 'My Banner 2@'
-
-p.bannerImage_3 = 'images/lookbook/IMG_0966.jpg'
-p.bannerTitle_3 = 'Title 3'
-p.bannerSubtitle_3 = 'My Banner 3@'
-
-p.bannerImage_4 = 'images/lookbook/IMG_0861.jpg'
-p.bannerTitle_4 = 'Title 4'
-p.bannerSubtitle_4 = 'My Banner 4@'
-
-p.bannerImage_5 = 'images/lookbook/IMG_0860.jpg'
-p.bannerTitle_5 = 'Title 5'
-p.bannerSubtitle_5 = 'My Banner 5@'
-
-p.bannerImage_6 = 'images/lookbook/IMG_7719.jpg'
-p.bannerTitle_6 = 'Laatste rokken'
-p.bannerSubtitle_6 = 'Er zijn er nog een paar'
-
-p.gallery = True # Trigger the template._gallery method call
-p.galleryHead = 'Gallery head'
-p.gallerySubhead = 'Gallery subhead'
-p.galleryImage_1 = 'images/notes/IMG_0926.jpeg'
-p.galleryCaption_1 = """Caption of this image. A very long one. Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum."""
-p.galleryImage_2 = 'images/notes/IMG_0929.jpeg'
-p.galleryCaption_2 = 'Short caption of this image.'  
-p.galleryImage_3 = 'images/notes/IMG_0933.jpeg'
-p.galleryImage_4 = 'images/notes/IMG_0934.jpeg'
-p.galleryImage_5 = 'images/notes/IMG_0935.jpeg'
-p.galleryImage_6 = 'images/notes/IMG_0936.jpeg'
-
-# Page thirdpage
-
-p = sd.newPage('thirdpage', 'Third page', 'index')
-
-p.imagesArticle = False
-p.pullQuote = False
-p.gallery = False
-
-p.bannerSlideShow = True
-p.bannerImage_1 = 'images/lookbook/IMG_2458.JPG'
-p.bannerTitle_1 = 'Laatste rokken'
-p.bannerSubtitle_1 = 'Er zijn er nog een paar'
-
-p.bannerImage_2 = 'images/lookbook/IMG_2361.JPG'
-p.bannerTitle_2 = 'Title 2'
-p.bannerSubtitle_2 = 'My Banner 2@'
-
-p.bannerImage_3 = 'images/lookbook/IMG_0966.jpg'
-p.bannerTitle_3 = 'Title 3'
-p.bannerSubtitle_3 = 'My Banner 3@'
-
-p.bannerImage_4 = 'images/lookbook/IMG_0861.jpg'
-p.bannerTitle_4 = 'Title 4'
-p.bannerSubtitle_4 = 'My Banner 4@'
-
-p.bannerImage_5 = 'images/lookbook/IMG_0860.jpg'
-p.bannerTitle_5 = 'Title 5'
-p.bannerSubtitle_5 = 'My Banner 5@'
-
-p.bannerImage_6 = 'images/lookbook/IMG_7719.jpg'
-p.bannerTitle_6 = 'Laatste rokken'
-p.bannerSubtitle_6 = 'Er zijn er nog een paar'
-	
-# Page fourthpage
-
-p = sd.newPage('fourthpage', 'Fourth page', 'elements')
-
-p.bannerSlideShow = True
-p.bannerImage_1 = 'images/lookbook/IMG_2458.JPG'
-p.bannerTitle_1 = 'Laatste rokken'
-p.bannerSubtitle_1 = 'Er zijn er nog een paar'
-
-p.bannerImage_2 = 'images/lookbook/IMG_2361.JPG'
-p.bannerTitle_2 = 'Title 2'
-p.bannerSubtitle_2 = 'My Banner 2@'
-
-p.bannerImage_3 = 'images/lookbook/IMG_0966.jpg'
-p.bannerTitle_3 = 'Title 3'
-p.bannerSubtitle_3 = 'My Banner 3@'
-
-p.bannerImage_4 = 'images/lookbook/IMG_0861.jpg'
-p.bannerTitle_4 = 'Title 4'
-p.bannerSubtitle_4 = 'My Banner 4@'
-
-p.bannerImage_5 = 'images/lookbook/IMG_0860.jpg'
-p.bannerTitle_5 = 'Title 5'
-p.bannerSubtitle_5 = 'My Banner 5@'
-
-p.bannerImage_6 = 'images/lookbook/IMG_7719.jpg'
-p.bannerTitle_6 = 'Laatste rokken'
-p.bannerSubtitle_6 = 'Er zijn er nog een paar'
-	
-p = sd.newPage(id='article', title='Article', template='article')
+#----------------------------------------------------------------------------- 
+p = sd.newPage(id='more-about-scarves', title='More about scarves', template='article')
 
 # Options in generic templates
-#	{{articlePageHeader}}
-#	{{article1}}
-#	{{pullQuote2}}
-#	{{article2}}
-# 	{{pullQuote3}}
-#	{{article3}}
-#	{{gallery}}
+#   {{articlePageHeader}}
+#   {{article1}}
+#   {{pullQuote2}}
+#   {{article2}}
+#   {{pullQuote3}}
+#   {{article3}}
+#   {{gallery}}
 
 p.articlePageHeader = True # Make the call to website._articlePageHeader(siteData, pageData) available.
 p.articlePageHeaderSubhead = 'Article page header subhead'
@@ -279,8 +273,69 @@ p.articlePageHeaderTitle = 'Article page title'
 
 p.article = True 
 p.articleSubhead = 'Article subhead'
-p.articleHead = 'Article head'
-p.articleText = 'Article text. '*100
+p.articleHead = 'More about scarves '
+p.articleText = """The shawl is a gift. By giving it, the giver wants to tell something to someone, “I give this unique shawl to my...”. For the receiver it is a way of expression. Depending on how the shawl is folded, emphasis is on either the alliterating typography or the decorative leaves. A new image every time as personal gift. To someone. Or to yourself. The scarves are hand made in a limited edition. 
+￼ ￼ ￼ ￼ ￼ ￼ 
+Scarf ‘Wonderful Woman’, ‘Lovely Lover’, ‘Marvelous Mother’ and ‘Fabulous Friend’ 
+
+The scarves of Generous Gesture are always a gift; either to yourself or to someone else. A vibrant combination of color, ornaments and/or typography, they can be worn in many different ways.The shawls are produced in block-print, provided with an embroidered frame, the material is silk,  or a combination of silk and eco cotton. The shawls are made of Rajshahi Bengali silk, woven by the shot or changeant technique. If the fabric moves the color changes and is continuously different. The clarity of the colors is extraordinary! 
+
+Typeface Productus is a design by Petr van Blokland, published by TYPETR - TypeNetwork in New York. 
+
+Washing Handle with love and care. Wash gently by hand in hand-warm water with detergent for silk. Ironing. Do not bleach, no tumble-dry. 
+
+Scarf ’Gentle Gent’  These scarves are embroidered by hand. Double layered fabrics of silk and cotton. They measure 12 x 65 inch (30 x165 cm). The silver colored silk is made of the best Rajshahi Bengali silk. The off-white cotton is eco friendly produced. 
+
+Typeface Village is a design by David Berlow, published by Font Bureau - TypeNetwork in New York 
+
+The scarf says ‘Gentle Gent’ in Latin (English) and in Bengali. Jo de Baerdemaker a typedesigner from Belgium was very helpful with the Bengali type. Visit www.typojo.com to learn more about his work. 
+"""
+
+p.pullQuote = True # Trigger the template method
+p.pullQuoteImage = 'images/notes/IMG_0929.jpeg'
+p.pullQuoteSubhead = 'Pullquote subhead 1'
+p.pullQuoteHead = 'Pullquote heading 1' 
+
+p.article_1 = False 
+p.pullQuote_1 = False
+p.article_2 = False
+p.pullQuote_2 = False
+p.gallery = False # Ignore the template._gallery method call
+
+ 
+#----------------------------------------------------------------------------- 
+p = sd.newPage(id='more-about-skirts', title='More about skirts', template='article')
+
+# Options in generic templates
+#   {{articlePageHeader}}
+#   {{article1}}
+#   {{pullQuote2}}
+#   {{article2}}
+#   {{pullQuote3}}
+#   {{article3}}
+#   {{gallery}}
+
+p.articlePageHeader = True # Make the call to website._articlePageHeader(siteData, pageData) available.
+p.articlePageHeaderSubhead = 'Article page header subhead'
+p.articlePageHeaderTitle = 'Article page title'
+
+p.article = True 
+p.articleSubhead = 'Article subhead'
+p.articleHead = 'Fabrics of the skirts'
+p.articleText = """Capsicum natuurstoffen is a Dutch initiative that uses eco cotton, handwoven in Kerala, India. This handwoven fabric consists of small inconsistencies, a characteristic of the handcrafted process. Capsicum has developed an environmentally friendly production process, they encourage their producers to improve working conditions and strive to pay their workers a fair wage. 
+
+In addition to the cottons, Capsicum promotes handwoven silk from Bangkok, Thailand, cooperating with a family business for over 30 years. 
+
+Zippers are sourced from Italian brand Lampo, certifıed by Oeko-Tex Standard 100.
+
+Pepper+Tom source their eco cotton and ink from Ecological Textiles for their hand painted skirts. This fırm offers a wide range in fabrics, yarns and dyes that are manufactured and processed in a sustainable way. Ecological Textiles stands for environmentally sound production, fair trade and top quality. 
+
+From threads to fabrics, from moulding to materials our products comply with all European environmental, occupational safety laws and respect for the workers. 
+##Wash instructions 
+Eco cotton Machine wash 40C, ironing, do not bleach, no tumble-dry. Handle with love and care. 
+
+Silk Wash gently only by hand, ironing, do not bleach, no tumble- dry. Handle with love and care. 
+"""
 
 p.pullQuote = True # Trigger the template method
 p.pullQuoteImage = 'images/notes/IMG_0929.jpeg'
@@ -300,8 +355,86 @@ p.pullQuoteHead_1 = 'Pullquote heading 1'
 p.article_2 = False
 p.pullQuote_2 = False
 p.gallery = False # Ignore the template._gallery method call
+   
+#----------------------------------------------------------------------------- 
+p = sd.newPage(id='contact', title='Contact', template='article')
 
-p = sd.newPage(id='article1', title='Article', template='article1')
+# Options in generic templates
+#   {{articlePageHeader}}
+#   {{article1}}
+#   {{pullQuote2}}
+#   {{article2}}
+#   {{pullQuote3}}
+#   {{article3}}
+#   {{gallery}}
 
-p = sd.newPage(id='gallery', title='Article', template='gallery')
+p.articlePageHeader = True # Make the call to website._articlePageHeader(siteData, pageData) available.
+p.articlePageHeaderSubhead = 'Let us know what you think'
+p.articlePageHeaderTitle = 'Contact'
+
+p.article = True 
+p.articleSubhead = 'Love to hear from you...'
+p.articleHead = 'Contact'
+p.articleText = """Love to hear from you... 
+
+Claudia Mens | claudia@petr.com 
+
+mobile +31 6 41 367 689 | studio +31 15 887 1233 
+
+Rietveld 56 | 2611 LM Delft | The Netherlands 
+
+<!-- 129 Indian Hill Road | 02575 West Tisbury Martha's | Vineyard | USA -->
+
+The company is registered in the Chamber of Commerce 
+￼ ￼ 
+(Handelsregister Kamer van Koophandel), by name Buro Petr van Blokland + Claudia Mens, number 27237753 Delft. 
+
+If you have a question not answered in this website, you can send an email (<a href="mailto:claudia@petr.com">claudia@petr.com</a>) and we will respond to you as soon as we can. 
+# Studio 
+Pepper+Tom is initiated by Claudia Mens, located at Rietveld 56, 2611 LM in Delft, The Netherlands. 
+
+Telephone mobile +31 6 41 367 689 or studio +31 15 887 1233 
+
+Email claudia@petr.com
+
+Pepper+Tom would never exist without a team of dedicated people. 
+
+Petr van Blokland Typedesigner Kirsten Langmuur Graphic designer Liesbeth Oltmans Designer, consultant, trendwatcher 
+
+Djoeke Delnooz, Claar van Liempt (& Lucy dog : ) Models 
+
+Libby Ellis  (Tom) Creative director 
+
+Sep Schaffers Text writer 
+
+Petra Dijkgraaf Tailor 
+
+Suzanne Liem Photographer 
+
+Pendleton, Boweevil, Capsicum, Ecological Textiles and Bottger Fabric suppliers 
+
+Claudia Mens (Pepper) Designer, founder Pepper+Tom
+#About Claudia Mens
+I am the child of the woods. We lived in a wooden house. At a dirt road. Endlessly tinker with acorns. Myself hiding under the ferns. Preferably in a sweater and pants. Wow, what a freedom, what a space. Always together with other kids. 
+
+“Watching is a verb,” my mother would say “look at the world. Look how beautiful that portrait has been painted.” I drew notebooks. Making atmospheres and environments, little peepshows. Then crept behind my mom’s Husqvarna sewing machine and sewed a wide comfy skirt. To climb into trees. 
+
+After three decades, running a studio from 1980 till 2010, it was time for something else. Claudia went looking and longing for the woods of her childhood. She found that feeling back on Martha's Vineyard in the USA, where she began drawing with childlike pleasure and painting. Arose leafs and fern motifs, inspired by her travels in Africa, South America and Asia. 
+
+She designed a series of scarves with type and motifs of leafs, produced by NGO Kumudini Welfare Trust in Bangladesh. In 2016, she started with a lot of spirit and fun Pepper+Tom. 
+
+Besides the products of Pepper+Tom, similar to work in all of the photo's on this website, design can be made by Claudia as a special custom assignment. Ask her: claudia@petr.com 
+
+"""
+
+p.pullQuote = True # Trigger the template method
+p.pullQuoteImage = 'images/notes/IMG_0929.jpeg'
+p.pullQuoteSubhead = 'Pullquote subhead 1'
+p.pullQuoteHead = 'Pullquote heading 1' 
+
+p.article_1 = False 
+p.pullQuote_1 = False
+p.article_2 = False
+p.pullQuote_2 = False
+p.gallery = False 
 
