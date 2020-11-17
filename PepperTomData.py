@@ -11,26 +11,39 @@
 #   Supporting DrawBot, www.drawbot.com
 # -----------------------------------------------------------------------------
 
-from pagebotnano_060.toolbox.sitedata import SiteData
+from pagebotnano_060.templates.sitedata import SiteData
 from pagebotnano_060.toolbox.dating import now
+from pagebotnano_060.themes import *
+from pagebotnano_060.toolbox.color import color
 
-siteData = SiteData('peppertom', 'Pepper+Tom')
-siteData.menuName = 'Menu'
-siteData.year = now().year
-siteData.copyright = ' | '.join((
+class PepperTomTheme(HappyHolidays):
+
+	logo1 = color(1)
+	logo2 = color(1, 0, 0) # Red
+	logo3 = color(0xEC842C)
+
+theme = PepperTomTheme()
+
+siteData = sd = SiteData(id='peppertom', title='Pepper+Tom', theme=theme)
+sd.menuName = 'Menu'
+sd.year = now().year
+sd.copyright = ' | '.join((
 	'<a href="https://peppertom.com" target="external">Pepper+Tom</a>',
 	'<a href="https://typetr.typenetwork.com">TYPETR</a>',
 	'<a href="https://designdesign.space">DesignDesign.Space</a>'))
-siteData.fontFamily = 'Upgrade'
-siteData.logo = """<span style="color:#ff0000;">|</span>d<span style="color: #EC842C;">|</span>"""
-siteData.logoFontFamily = 'PepperTom'
-siteData.monoFontFamily = 'Courier New'
-siteData.iconFontFamily = 'FontAwesome'
-siteData.menuLinks = True # Force call to template._menuLinks()
+sd.fontFamily = 'Upgrade'
+sd.logo = """<span style="color:#%s;">|</span><span style="color:#%s">d</span><span style="color: #%s;">|</span>""" % (theme.logo2.hex, theme.logo1.hex, theme.logo3.hex)
+
+sd.fontsCss = True
+sd.fontFamily = 'Upgrade'
+sd.logoFontFamily = 'PepperTom'
+sd.monoFontFamily = 'Courier New'
+sd.iconFontFamily = 'FontAwesome'
+sd.menuLinks = True # Force call to template._menuLinks()
 
 # Page index
 
-p = siteData.newPage(id='index', title='Home', template='index')
+p = sd.newPage(id='index', title='Home', template='index')
 
 # Page index, banner
 
@@ -63,9 +76,14 @@ p.bannerImage_7 = 'images/studio/IMG_9571.jpg'
 p.bannerTitle_7 = 'Title 7'
 p.bannerSubtitle_7 = 'My Banner 7@'
 
+# Page index, subscriptionForm
+
+p.subscriptionForm = True
+p.subscriptionFormHead = 'Yes, I am interested, ...'
+
 # Page index, article 1
 
-p.imageArticles = True # Trigger the template._imageArticles call
+p.imagesArticle = True # Trigger the template._imagesArticle call
 p.articleImage_1 = 'images/scarfs/groen1-1.jpg'
 p.articleSubhead_1 = 'Last ones in stock'
 p.articleHead_1 = 'Skirts'
@@ -101,9 +119,9 @@ p.articleFooter_2 = 'Footer of article 2'
 # Page index, pullquote
 
 p.pullQuote = True # Trigger the template method
-p.pullQuoteImage_1 = 'images/notes/IMG_0929.jpeg'
-p.pullQuoteSubhead_1 = 'Pullquote subhead'
-p.pullQuoteHead_1 = 'Pullquote heading' 
+p.pullQuoteImage = 'images/notes/IMG_0929.jpeg'
+p.pullQuoteSubhead = 'Pullquote subhead'
+p.pullQuoteHead = 'Pullquote heading' 
 
 p.gallery = True # Trigger the template._gallery method call
 p.galleryHead = 'Gallery head'
@@ -119,9 +137,9 @@ p.galleryImage_6 = 'images/notes/IMG_0936.jpeg'
 
 # Page otherpage
 
-p = siteData.newPage('otherpage', 'Other Page', 'article')
+p = sd.newPage('otherpage', 'Other Page', 'article')
 
-p.imageArticles = False # Ignore these in the template
+p.imagesArticle = False # Ignore these in the template
 p.pullQuote = False
 
 p.bannerSlideShow = True
@@ -163,8 +181,13 @@ p.galleryImage_6 = 'images/notes/IMG_0936.jpeg'
 
 # Page thirdpage
 
-p = siteData.newPage('thirdpage', 'Third page', 'generic')
+p = sd.newPage('thirdpage', 'Third page', 'index')
 
+p.imagesArticle = False
+p.pullQuote = False
+p.gallery = False
+
+p.bannerSlideShow = True
 p.bannerImage_1 = 'images/lookbook/IMG_2458.JPG'
 p.bannerTitle_1 = 'Laatste rokken'
 p.bannerSubtitle_1 = 'Er zijn er nog een paar'
@@ -191,8 +214,9 @@ p.bannerSubtitle_6 = 'Er zijn er nog een paar'
 	
 # Page fourthpage
 
-p = siteData.newPage('fourthpage', 'Fourth page', 'elements')
+p = sd.newPage('fourthpage', 'Fourth page', 'elements')
 
+p.bannerSlideShow = True
 p.bannerImage_1 = 'images/lookbook/IMG_2458.JPG'
 p.bannerTitle_1 = 'Laatste rokken'
 p.bannerSubtitle_1 = 'Er zijn er nog een paar'
@@ -217,3 +241,46 @@ p.bannerImage_6 = 'images/lookbook/IMG_7719.jpg'
 p.bannerTitle_6 = 'Laatste rokken'
 p.bannerSubtitle_6 = 'Er zijn er nog een paar'
 	
+p = sd.newPage(id='article', title='Article', template='article')
+
+# Options in generic templates
+#	{{articlePageHeader}}
+#	{{article1}}
+#	{{pullQuote2}}
+#	{{article2}}
+# 	{{pullQuote3}}
+#	{{article3}}
+#	{{gallery}}
+
+p.articlePageHeader = True # Make the call to website._articlePageHeader(siteData, pageData) available.
+p.articlePageHeaderSubhead = 'Article page header subhead'
+p.articlePageHeaderTitle = 'Article page title'
+
+p.article = True 
+p.articleSubhead = 'Article subhead'
+p.articleHead = 'Article head'
+p.articleText = 'Article text. '*100
+
+p.pullQuote = True # Trigger the template method
+p.pullQuoteImage = 'images/notes/IMG_0929.jpeg'
+p.pullQuoteSubhead = 'Pullquote subhead 1'
+p.pullQuoteHead = 'Pullquote heading 1' 
+
+p.article_1 = True 
+p.articleSubhead_1 = 'Article subhead2'
+p.articleHead_1 = 'Article head2'
+p.articleText_1 = 'Article text2. '*100
+
+p.pullQuote_1 = True # Trigger the template method
+p.pullQuoteImage_1 = 'images/notes/IMG_0929.jpeg'
+p.pullQuoteSubhead_1 = 'Pullquote subhead 1'
+p.pullQuoteHead_1 = 'Pullquote heading 1' 
+
+p.article_2 = False
+p.pullQuote_2 = False
+p.gallery = False # Ignore the template._gallery method call
+
+p = sd.newPage(id='article1', title='Article', template='article1')
+
+p = sd.newPage(id='gallery', title='Article', template='gallery')
+
