@@ -184,6 +184,7 @@ p.subscriptionFormHead = 'Yes, I am interested, ...'
 # Page index, article 1
 
 p.imagesArticle = True # Trigger the template._imagesArticle call
+# CSS
 sd.articleHeadSize = '2rem';
 sd.articleHeadColor = sd.theme.getColor('accent text')
 sd.articleSubheadSize = '1.5rem';
@@ -197,7 +198,7 @@ p.articleFooter_1 = dk2
 
 # Page index, article 2
 
-p.articleImage_2 = 'images/scarfs/_scarf_silver_02.jpg'
+p.articleImage_2 = 'images/scarfs/scarf_silver_02.jpg'
 p.articleSubhead_2 = 'Article subhead 2'
 p.articleHead_2 = 'Scarves'
 p.articleText_2 = articleScarves
@@ -205,7 +206,6 @@ p.articleFooter_2 = dk3
 
 # Page index, article 3
 
-p.imagesArticle = True # Trigger the template._imagesArticle call
 p.articleImage_3 = 'images/skirts/IMG_0091_1.jpg'
 p.articleSubhead_3 = 'Article subhead 3'
 p.articleHead_3 = 'Skirts'
@@ -302,7 +302,7 @@ p.article_2 = False
 p.pullQuote_2 = False
 p.gallery = False # Ignore the template._gallery method call
 
- 
+
 #----------------------------------------------------------------------------- 
 p = sd.newPage(id='more-about-skirts', title='More about skirts', template='article')
 

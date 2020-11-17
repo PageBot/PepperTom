@@ -46,6 +46,7 @@ website.compose(siteData)
 
 # Start MAMP to see this website on localhost, port 80
 website.export(website.MAMP_PATH + siteData.id) 
+website.export('docs/') 
 os.system(u'/usr/bin/open %s/%s' % (website.url, siteData.id))
 
 print('Done')
