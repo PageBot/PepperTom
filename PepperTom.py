@@ -40,6 +40,7 @@ templates = TemplatedHielo()
 #templates = TemplatedRadius()
 
 website = Website(templates=templates, port=PORT)
+website.templates.read('images')
 
 # Compose the website with this content.
 website.compose(siteData)

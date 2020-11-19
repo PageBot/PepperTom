@@ -92,9 +92,9 @@ p = sd.newPage(id='index', title='Home', template='index')
 t1 = 'Pepper+Tom pop-up!'
 t2 = 'P+T invites you!'
 
-dk1 = 'Leftovers, from several editions of small series of skirts, pants and scarves for high end stores, are waiting for you.'
-dk2 = 'I would love to bring all these beautiful handmade or semi- couture garments into the world. Together we will make an attractive price ;) '
-dk3 = 'Call or email me for an appointment in my studio in Delft. Come by yourself or with maximum two others. '
+dk1 = 'Leftovers, from several editions of small series. Skirts, pants and scarves for high end stores, are waiting for you.'
+dk2 = 'I would love to bring all these beautiful handmade or semi- couture garments into the world. Together we will make an attractive price ; ) '
+dk3 = 'Call or <a href="mailto:claudia@petr.com?subject=Studio visit">email</a> me for an appointment in my studio in Delft. Come by yourself or with maximum two others. '
 dk4 = 'The skirts and pants are all different, every piece is unique. there’s a variety of sizes from XXS to XL. Which one will be yours?!'
 dk5 = 'The scarves will always fit. Or as a gift for yourself or for someone else.'
 dk6 = 'Looking forward seeing you!'
@@ -105,6 +105,8 @@ st3 = 'Call or email me for an appointment in my studio in Delft'
 st4 = 'Every piece is unique'
 st5 = 'The scarves will always fit'
 st6 = dk6
+
+articleInvitation = '%s\n\n%s\n\n%s\n\n%s\n\n%s\n\n%s\n\n' % (dk1, dk2, dk3, dk4, dk5, dk6)
 
 articleFashion = """Where do clothing and fabrics come from? Who made them and under what circumstances? Often there is no answer to these questions, even when asking them in expensive stores. 
 
@@ -148,11 +150,10 @@ Handle with love and care, wash gently only hand-wash, ironing, do not bleach, n
 
 p.bannerSlideShow = True
 sd.bannerSlideShowHeadSize = '5rem' # Set to siteData
-sd.bannerSlideShowHeadSizeColor = sd.theme.getColor('main text diap')
-sd.bannerSlideShowSubheadSize = '1.2rem'
-sd.bannerSlideShowSubheadColor = sd.theme.getColor('main text diap', a=0.7)
+sd.bannerSlideShowHeadSizeColor = sd.theme.getColor('lowest')
+sd.bannerSlideShowSubheadColor = sd.theme.getColor('lowest', a=0.85)
 
-p.bannerImage_1 = 'images/skirts/static1.squarespace.jpg'
+p.bannerImage_1 = 'images/claar/IMG_7187.jpeg'
 p.bannerTitle_1 = t1
 p.bannerSubtitle_1 = st1
 
@@ -190,35 +191,44 @@ sd.articleHeadColor = sd.theme.getColor('accent text')
 sd.articleSubheadSize = '1.5rem';
 sd.articleSubheadColor = sd.articleHeadColor
 
-p.articleImage_1 = 'images/studio/IMG_9563.jpg'
-p.articleSubhead_1 = 'Article subhead 1'
-p.articleHead_1 = 'Desirable fabrics & fashion'
-p.articleText_1 = articleFashion
-p.articleFooter_1 = dk2
+# Page index, article invitation
+
+p.articleImage_1 = 'images/claar/IMG_7187.jpeg'
+p.articleSubhead_1 = 'Pepper+Tom pop-up! '
+p.articleHead_1 = 'Pepper+Tom is inviting you!'
+p.articleText_1 = articleInvitation
 
 # Page index, article 2
 
-p.articleImage_2 = 'images/scarfs/scarf_silver_02.jpg'
-p.articleSubhead_2 = 'Article subhead 2'
-p.articleHead_2 = 'Scarves'
-p.articleText_2 = articleScarves
-p.articleFooter_2 = dk3
+p.articleImage_2 = 'images/studio/IMG_9563.jpg'
+p.articleSubhead_2 = 'Cool clothes. Designed&nbsp;styles.'
+p.articleHead_2 = 'Desirable fabrics & fashion'
+p.articleText_2 = articleFashion
+p.articleFooter_2 = dk2
+
+# Page index, article 2
+
+p.articleImage_3 = 'images/scarfs/scarf_silver_02.jpg'
+p.articleSubhead_3 = 'Sustainable materials. Fair&nbsp;trade.'
+p.articleHead_3 = 'Scarves'
+p.articleText_3 = articleScarves
+p.articleFooter_3 = dk3
 
 # Page index, article 3
 
-p.articleImage_3 = 'images/skirts/IMG_0091_1.jpg'
-p.articleSubhead_3 = 'Article subhead 3'
-p.articleHead_3 = 'Skirts'
-p.articleText_3 = articleFashion
-p.articleFooter_3 = dk4
+p.articleImage_4 = 'images/skirts/IMG_0091_1.jpg'
+p.articleSubhead_4 = 'Slow fashion.'
+p.articleHead_4 = 'Skirts'
+p.articleText_4 = articleFashion
+p.articleFooter_4 = dk4
 
 # Page index, article 4
 
-p.articleImage_4 = 'images/notes/IMG_0936.jpeg'
-p.articleSubhead_4 = 'Article subhead 4'
-p.articleHead_4 = 'Pants'
-p.articleText_4 = articlePants
-p.articleFooter_4 = dk5
+p.articleImage_5 = 'images/notes/IMG_0936.jpeg'
+p.articleSubhead_5 = 'Pepper+Tom makes it work.'
+p.articleHead_5 = 'Pants'
+p.articleText_5 = articlePants
+p.articleFooter_5 = dk5
 
 # Page index, deck
 
@@ -280,15 +290,11 @@ Scarf ‘Wonderful Woman’, ‘Lovely Lover’, ‘Marvelous Mother’ and ‘F
 
 The scarves of Generous Gesture are always a gift; either to yourself or to someone else. A vibrant combination of color, ornaments and/or typography, they can be worn in many different ways.The shawls are produced in block-print, provided with an embroidered frame, the material is silk,  or a combination of silk and eco cotton. The shawls are made of Rajshahi Bengali silk, woven by the shot or changeant technique. If the fabric moves the color changes and is continuously different. The clarity of the colors is extraordinary! 
 
-Typeface Productus is a design by Petr van Blokland, published by TYPETR - TypeNetwork in New York. 
-
-Washing Handle with love and care. Wash gently by hand in hand-warm water with detergent for silk. Ironing. Do not bleach, no tumble-dry. 
-
 Scarf ’Gentle Gent’  These scarves are embroidered by hand. Double layered fabrics of silk and cotton. They measure 12 x 65 inch (30 x165 cm). The silver colored silk is made of the best Rajshahi Bengali silk. The off-white cotton is eco friendly produced. 
 
-Typeface Village is a design by David Berlow, published by Font Bureau - TypeNetwork in New York 
-
 The scarf says ‘Gentle Gent’ in Latin (English) and in Bengali. Jo de Baerdemaker a typedesigner from Belgium was very helpful with the Bengali type. Visit www.typojo.com to learn more about his work. 
+## Wash instructions
+Handle with love and care. Wash gently by hand in hand-warm water with detergent for silk. Ironing. Do not bleach, no tumble-dry. 
 """
 
 p.pullQuote = True # Trigger the template method
@@ -331,8 +337,8 @@ Zippers are sourced from Italian brand Lampo, certifıed by Oeko-Tex Standard 10
 Pepper+Tom source their eco cotton and ink from Ecological Textiles for their hand painted skirts. This fırm offers a wide range in fabrics, yarns and dyes that are manufactured and processed in a sustainable way. Ecological Textiles stands for environmentally sound production, fair trade and top quality. 
 
 From threads to fabrics, from moulding to materials our products comply with all European environmental, occupational safety laws and respect for the workers. 
-##Wash instructions 
-Eco cotton Machine wash 40C, ironing, do not bleach, no tumble-dry. Handle with love and care. 
+## Wash instructions 
+Eco cotton Machine wash 40°C, ironing, do not bleach, no tumble-dry. Handle with love and care. 
 
 Silk Wash gently only by hand, ironing, do not bleach, no tumble- dry. Handle with love and care. 
 """
@@ -342,10 +348,7 @@ p.pullQuoteImage = 'images/notes/IMG_0929.jpeg'
 p.pullQuoteSubhead = 'Pullquote subhead 1'
 p.pullQuoteHead = 'Pullquote heading 1' 
 
-p.article_1 = True 
-p.articleSubhead_1 = 'Article subhead2'
-p.articleHead_1 = 'Article head2'
-p.articleText_1 = 'Article text2. '*100
+p.article_1 = False 
 
 p.pullQuote_1 = True # Trigger the template method
 p.pullQuoteImage_1 = 'images/notes/IMG_0929.jpeg'
@@ -383,14 +386,11 @@ mobile +31 6 41 367 689 | studio +31 15 887 1233
 
 Rietveld 56 | 2611 LM Delft | The Netherlands 
 
-<!-- 129 Indian Hill Road | 02575 West Tisbury Martha's | Vineyard | USA -->
+The company is registered in the Chamber of Commerce (Handelsregister Kamer van Koophandel), by name Buro Petr van Blokland + Claudia Mens, number 27237753 Delft. 
 
-The company is registered in the Chamber of Commerce 
-￼ ￼ 
-(Handelsregister Kamer van Koophandel), by name Buro Petr van Blokland + Claudia Mens, number 27237753 Delft. 
+If you have a question not answered in this website, you can send an email (<a href="mailto:claudia@petr.com?subject=Contact Pepper+Tom">claudia@petr.com</a>) and we will respond to you as soon as we can. 
 
-If you have a question not answered in this website, you can send an email (<a href="mailto:claudia@petr.com">claudia@petr.com</a>) and we will respond to you as soon as we can. 
-# Studio 
+## Studio 
 Pepper+Tom is initiated by Claudia Mens, located at Rietveld 56, 2611 LM in Delft, The Netherlands. 
 
 Telephone mobile +31 6 41 367 689 or studio +31 15 887 1233 
@@ -399,7 +399,11 @@ Email claudia@petr.com
 
 Pepper+Tom would never exist without a team of dedicated people. 
 
-Petr van Blokland Typedesigner Kirsten Langmuur Graphic designer Liesbeth Oltmans Designer, consultant, trendwatcher 
+Petr van Blokland Typedesigner 
+
+Kirsten Langmuur Graphic designer 
+
+Liesbeth Oltmans Designer, consultant, trendwatcher 
 
 Djoeke Delnooz, Claar van Liempt (& Lucy dog : ) Models 
 
@@ -414,8 +418,9 @@ Suzanne Liem Photographer
 Pendleton, Boweevil, Capsicum, Ecological Textiles and Bottger Fabric suppliers 
 
 Claudia Mens (Pepper) Designer, founder Pepper+Tom
-#About Claudia Mens
-I am the child of the woods. We lived in a wooden house. At a dirt road. Endlessly tinker with acorns. Myself hiding under the ferns. Preferably in a sweater and pants. Wow, what a freedom, what a space. Always together with other kids. 
+---
+## About Claudia Mens
+*“I am the child of the woods. We lived in a wooden house. At a dirt road. Endlessly tinker with acorns. Myself hiding under the ferns. Preferably in a sweater and pants. Wow, what a freedom, what a space. Always together with other kids.”*
 
 “Watching is a verb,” my mother would say “look at the world. Look how beautiful that portrait has been painted.” I drew notebooks. Making atmospheres and environments, little peepshows. Then crept behind my mom’s Husqvarna sewing machine and sewed a wide comfy skirt. To climb into trees. 
 
@@ -423,7 +428,7 @@ After three decades, running a studio from 1980 till 2010, it was time for somet
 
 She designed a series of scarves with type and motifs of leafs, produced by NGO Kumudini Welfare Trust in Bangladesh. In 2016, she started with a lot of spirit and fun Pepper+Tom. 
 
-Besides the products of Pepper+Tom, similar to work in all of the photo's on this website, design can be made by Claudia as a special custom assignment. Ask her: claudia@petr.com 
+Besides the products of Pepper+Tom, similar to work in all of the photo's on this website, design can be made by Claudia as a special custom assignment. Ask her: <a href="mailto:claudia@petr.com?subject=Contact Pepper+Tom">claudia@petr.com</a> 
 
 """
 
