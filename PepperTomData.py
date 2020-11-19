@@ -245,12 +245,10 @@ p.slideShowTimer = 4
 p.slideShowDuration = 0.7
 sd.slideShowBackgroundColor = sd.theme.black
 p.slideShowImages = (
-    'images/lookbook/IMG_6275.jpg',
-    'images/lookbook/IMG_5140.jpg',
-    ('images/lookbook/IMG_5351.jpg', 'left top'),
-    'images/lookbook/IMG_5701.jpg',
-    'images/lookbook/IMG_6090.jpg',
-    'images/lookbook/IMG_3338.jpg',
+    ('images/lookbook/IMG_6275.jpg', None, 'IMG_6275'),
+    ('images/lookbook/IMG_5140.jpg', None, 'IMG_5140'),
+    ('images/lookbook/IMG_5351.jpg', None, 'IMG_5351'),
+    ('images/lookbook/IMG_5351.jpg', None, 'IMG_5351'),
 )
 
 p.slideShow_1 = True # Turn it on
@@ -261,32 +259,13 @@ p.slideShowControls_1 = False
 p.slideShowPager_1 = False
 p.slideShowTimer_1 = 2
 p.slideShowDuration_1 = 1
+p.slideShowJsCallbackBefore_1 = 'slideShowUpdateCaption'
 sd.slideShowBackgroundColor_1 = sd.theme.black
 p.slideShowImages_1 = (
-    'images/lookbook/rok_tas_strand.jpg',
-    'images/lookbook/IMG_9059.jpeg',
-    'images/lookbook/IMG_9060.jpeg',
-    'images/lookbook/IMG_9061.jpeg',
-    'images/lookbook/IMG_9062.jpeg',
-    'images/lookbook/IMG_9064.jpeg',
-    'images/lookbook/IMG_9065.jpeg',
-    'images/lookbook/IMG_9066.jpeg',
-    'images/lookbook/IMG_9067.jpeg',
-    'images/lookbook/IMG_9068.jpeg',
-    'images/lookbook/IMG_9069.jpeg',
-    'images/lookbook/IMG_9070.jpeg',
-    'images/lookbook/IMG_9071.jpeg',
-    'images/lookbook/IMG_9072.jpeg',
-    'images/lookbook/IMG_9074.jpeg',
-    'images/lookbook/IMG_9075.jpeg',
-    'images/lookbook/IMG_9076.jpeg',
-    'images/lookbook/IMG_9079.jpeg',
-    'images/lookbook/IMG_9080.jpeg',
-    'images/lookbook/IMG_9081.jpeg',
-    'images/lookbook/IMG_9082.jpeg',
-    'images/lookbook/rok_tas_bos.jpg',
-    'images/lookbook/rok_tas_rode_houten_wand.jpg',
-    'images/lookbook/rok_tas_strand_02.jpg',
+    ('images/lookbook/rok_tas_strand.jpg', None, 'Bag on the beach'),
+    ('images/lookbook/rok_tas_bos.jpg', None, 'Bag in the woods'),
+    ('images/lookbook/rok_tas_rode_houten_wand.jpg', None, 'Bag on the farm'),
+    ('images/lookbook/rok_tas_strand_02.jpg', None, 'Heading for a beaching day'),
 )
 # Page index, deck
 
