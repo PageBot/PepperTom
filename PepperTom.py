@@ -29,7 +29,7 @@ PORT = 8888
 # Create a Website publications with this theme and templates
 #templates = TemplatedBinary()
 #templates = TemplatedBroadcast()
-#templates = TemplatedCaminar()
+#templates = TemplatedCaminar()    'images/lookbook/
 #templates = TemplatedFullmotion()
 templates = TemplatedHielo()
 #templates = TemplatedInterphase()

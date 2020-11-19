@@ -58,6 +58,8 @@ sd.bodyText2Size = '1.3rem'
 sd.bodyText2Leading = '1.6rem'
 sd.bodyText2Font = sd.bodyFont
 
+sd.slideShowBackgroundColor = sd.theme.highest
+
 sd.fonts = (
     'Hairline',
     'Hairline_Italic',
@@ -144,7 +146,8 @@ articlePants = """The fabric of these pants has been produced by the best crafts
 All pants have wide legs. The pants with or without a waistband. All very comfortable to wear. Iconic, centerpiece items:Timeless!
 
 The pants are produced in a Dutch atelier, piece by piece. 
-### Wash instruction 
+
+## Wash instruction 
 Handle with love and care, wash gently only hand-wash, ironing, do not bleach, no tumble-dry, chemical cleaning.
 """
 
@@ -230,6 +233,26 @@ p.articleHead_5 = 'Pants'
 p.articleText_5 = articlePants
 p.articleFooter_5 = dk5
 
+# Page index, slideShow
+
+p.slideShow = True # Turn it on
+p.slideShowHeight = 300
+p.slideShowDynamicHeight = False
+p.slideShowCarousel = 2 # Number of slides
+p.slideShowControls = False
+p.slideShowPager = False
+p.slideShowTimer = 4
+p.slideShowDuration = 0.7
+sd.slideShowBackgroundColor = sd.theme.black
+p.slideShowImages = (
+    'images/lookbook/IMG_6275.jpg',
+    'images/lookbook/IMG_5140.jpg',
+    ('images/lookbook/IMG_5351.jpg', 'left top'),
+    'images/lookbook/IMG_5701.jpg',
+    'images/lookbook/IMG_6090.jpg',
+    'images/lookbook/IMG_3338.jpg',
+)
+
 # Page index, deck
 
 sd.deckFont = 'Upgrade-Light_Italic'
@@ -293,6 +316,7 @@ The scarves of Generous Gesture are always a gift; either to yourself or to some
 Scarf ’Gentle Gent’  These scarves are embroidered by hand. Double layered fabrics of silk and cotton. They measure 12 x 65 inch (30 x165 cm). The silver colored silk is made of the best Rajshahi Bengali silk. The off-white cotton is eco friendly produced. 
 
 The scarf says ‘Gentle Gent’ in Latin (English) and in Bengali. Jo de Baerdemaker a typedesigner from Belgium was very helpful with the Bengali type. Visit www.typojo.com to learn more about his work. 
+
 ## Wash instructions
 Handle with love and care. Wash gently by hand in hand-warm water with detergent for silk. Ironing. Do not bleach, no tumble-dry. 
 """
@@ -337,6 +361,7 @@ Zippers are sourced from Italian brand Lampo, certifıed by Oeko-Tex Standard 10
 Pepper+Tom source their eco cotton and ink from Ecological Textiles for their hand painted skirts. This fırm offers a wide range in fabrics, yarns and dyes that are manufactured and processed in a sustainable way. Ecological Textiles stands for environmentally sound production, fair trade and top quality. 
 
 From threads to fabrics, from moulding to materials our products comply with all European environmental, occupational safety laws and respect for the workers. 
+
 ## Wash instructions 
 Eco cotton Machine wash 40°C, ironing, do not bleach, no tumble-dry. Handle with love and care. 
 
