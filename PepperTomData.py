@@ -236,36 +236,90 @@ p.articleFooter_5 = dk5
 # Page index, slideShow
 
 p.slideShow = True # Turn it on
-p.slideShowHeight = 300
+p.slideShowHeight = 500
 p.slideShowDynamicHeight = False
 p.slideShowCarousel = 2 # Number of slides
 p.slideShowControls = False
 p.slideShowPager = False
 p.slideShowTimer = 4
 p.slideShowDuration = 0.7
+p.slideShowJsCallbackBefore = 'slideShowCaptionUpdate'
 sd.slideShowBackgroundColor = sd.theme.black
+p.slideShowCaptionMarginBottom = 80
+p.slideShowCaptionFontSize = 32
+p.slideShowCaptionFont = 'Upgrade-Book_Italic'
 p.slideShowImages = (
-    ('images/lookbook/IMG_6275.jpg', None, 'IMG_6275'),
-    ('images/lookbook/IMG_5140.jpg', None, 'IMG_5140'),
-    ('images/lookbook/IMG_5351.jpg', None, 'IMG_5351'),
-    ('images/lookbook/IMG_5351.jpg', None, 'IMG_5351'),
+    ('images/lookbook/img_7141.jpg', None, 'Love the contrast, love the matching | Menemsha MV'),
+    ('images/lookbook/img_2458.jpg', None, 'Playing with card board, marker and crayons'),
+    ('images/lookbook/img_2361.jpg', None, 'Leafs and light'),
+    ('images/lookbook/claudia_schaduw.jpg', None, 'Thank you sunlight!'),
+    ('images/lookbook/img_8629.jpg', None, 'Sure?!'),
+    ('images/lookbook/img_8857+2.jpg', None, 'Beach fun, no lifeguards around... | MV'),
+    ('images/lookbook/img_8601.jpg', None, 'Impressed by Ursula von Rydingsvard and Alexander Calder at Storm King | NYC'),
+    ('images/lookbook/img_8437.jpg', None, 'Design thru light'),
+    ('images/lookbook/img_8370.jpg', None, 'Inspired by light, reflection, color | Robert Irwin | DIA Beacon NY'),
+    ('images/lookbook/img_8281.jpg', None, 'Reflections'),
+    ('images/lookbook/img_5351.jpg', None, 'Ice design'),
+    ('images/lookbook/img_8575.jpg', None, 'Calder meets the Hudson Valley | Alexander Calder | Storm King NYC'),
+    ('images/lookbook/img_8102.jpg', None, 'Lift your head once in a while, you will love it!'),
+    ('images/lookbook/img_1578.jpg', None, 'Cutting paper letters'),
+    ('images/lookbook/img_7719.jpg', None, 'Color and character'),
+    ('images/lookbook/img_3338.jpg', None, 'Generous Gesture | Embroidered Nakshi Kantha | Detail Latin and Bengali type'),
+    ('images/lookbook/img_7942.jpg', None, 'Doubled'),
+    ('images/lookbook/img_7933.jpg', None, 'Old meets new | Ceiling Cooper Hewitt Museum | NYC'),
+    ('images/lookbook/img_7862.jpg', None, 'Grey tones'),
+    ('images/lookbook/rok_tas_strand_02.jpg', None, 'A repoussoir for Pepper+Tom | MV US'),
+    ('images/lookbook/img_7859.jpg', None, 'Black and white, so strong together'),
+    ('images/lookbook/img_7768.jpg', None, 'So beautiful to get older'),
+    ('images/lookbook/claudia_schaduw_02.jpg', None, 'Pepper+Tom skirt having fun at home'),
+    ('images/lookbook/img_7887.jpg', None, 'Reused fabric | Cooper Hewitt Museum | NYC'),
+    ('images/lookbook/img_7737.jpg', None, 'Above your head in ABC CARPET & HOME | NYC'),
+    ('images/lookbook/img_7645.jpg', None, 'Behind the physical object'),
+    ('images/lookbook/img_6090.jpg', None, 'Rusted TYPETR Promise type in ’s Hertogenbosch | NL'),
+    ('images/lookbook/img_0861.jpg', None, 'Friendly Guy in the City'),
 )
 
 p.slideShow_1 = True # Turn it on
-p.slideShowHeight_1 = 300
+p.slideShowHeight_1 = 500
 p.slideShowDynamicHeight_1 = False
 p.slideShowCarousel_1 = 2 # Number of slides
 p.slideShowControls_1 = False
 p.slideShowPager_1 = False
-p.slideShowTimer_1 = 2
-p.slideShowDuration_1 = 1
-p.slideShowJsCallbackBefore_1 = 'slideShowUpdateCaption'
+p.slideShowTimer_1 = 4
+p.slideShowDuration_1 = 0.7
+p.slideShowJsCallbackBefore_1 = 'slideShowCaptionUpdate_1'
 sd.slideShowBackgroundColor_1 = sd.theme.black
+p.slideShowCaptionMarginBottom_1 = 80
+p.slideShowCaptionFontSize_1 = 32
+p.slideShowCaptionFont_1 = 'Upgrade-Book_Italic'
 p.slideShowImages_1 = (
-    ('images/lookbook/rok_tas_strand.jpg', None, 'Bag on the beach'),
-    ('images/lookbook/rok_tas_bos.jpg', None, 'Bag in the woods'),
-    ('images/lookbook/rok_tas_rode_houten_wand.jpg', None, 'Bag on the farm'),
-    ('images/lookbook/rok_tas_strand_02.jpg', None, 'Heading for a beaching day'),
+    ('images/lookbook/img_0860.jpg', None, 'Grand Old Lady, an Archetype in the City.'),
+    ('images/lookbook/img_9074.jpg', None, 'Edward Hopper, Hero of light, color, desolation.'),
+    ('images/lookbook/img_9071.jpg', None, 'Scarlet runner beans’ color palet.'),
+    ('images/lookbook/img_9069.jpg', None, 'Charlotte Brontë, more than a wonderful writer.'),
+    ('images/lookbook/rok_tas_strand.jpg', None, 'Skirt reaching the beach, always so good to be there | MV US'),
+    ('images/lookbook/img_9064.jpg', None, 'Surface, light, reflection.'),
+    ('images/lookbook/img_9066.jpg', None, 'Weathered skin.'),
+    ('images/lookbook/img_9075.jpg', None, 'Results of planting, nurturing, harvesting. Mannequins at the Agricultural Fair | MV US'),
+    ('images/lookbook/img_9067.jpg', None, 'Russel Wright’s joy of interior experiments at Manitoga | Garrison NYC'),
+    ('images/lookbook/img_9062.jpg', None, 'Tactility of Richard Serra’s corten steel bodies.'),
+    ('images/lookbook/img_9059.jpg', None, 'Sketchbook | Claudia Mens'),
+    ('images/lookbook/img_9060.jpg', None, 'Spring in Vermont | US'),
+    ('images/lookbook/img_9081.jpg', None, 'Still life at Putney School | Vermont US'),
+    ('images/lookbook/img_9061.jpg', None, 'Passing a garbage bin.'),
+    ('images/lookbook/img_9079.jpg', None, 'Zinnias, the Summer Souls.'),
+    ('images/lookbook/img_9076.jpg', None, 'Coop creations.'),
+    ('images/lookbook/img_9068.jpg', None, 'Wall detail at the Russel Wright Foundation, pine needles and concrete | Garrison NYC'),
+    ('images/lookbook/img_9065.jpg', None, 'Sol LeWitt, achromatic scheme | DIA Beacon NY'),
+    ('images/lookbook/img_3327.jpg', None, 'Generous Gesture | Who’s the Dandy? | Embroidered Nakshi Kantha'),
+    ('images/lookbook/img_9060.jpg', None, 'Fall in the dunes | Wassenaar NL'),
+    ('images/lookbook/rok_tas_bos.jpg', None, 'Skirt on her way to the beach | Martha’s Vineyard US'),
+    ('images/lookbook/img_3336.jpg', None, 'Embroidered type | Generous Gesture'),
+    ('images/lookbook/img_0966.jpg', None, 'Hanging in the balance | Alexander Calder | Witney Museum | NYC'),
+    ('images/lookbook/img_0858.jpg', None, 'Knitting Madison Square by Daniella on Design | NYC'),
+    ('images/lookbook/img_5140.jpg', None, 'Shop window in Antwerp | Belgium'),
+    ('images/lookbook/img_7798.jpg', None, 'Cut out paper, the background appears'),
+    ('images/lookbook/img_7038.jpg', None, 'Layers, always intriguing | Edgartown MV'),
 )
 # Page index, deck
 
