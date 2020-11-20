@@ -270,11 +270,11 @@
 	    grid-template-columns: 1fr; /* 2fr 1fr; */
 	    column-gap: 10px;
 	    row-gap: 10px;    
-	    background-color: #000000;
+	    background-color: rgba(255, 255, 255, 0.85);
 	}
 	.slideshow {
 		margin: 0;
-	    background-color: #000000;
+	    background-color: rgba(255, 255, 255, 0.85);
 	}
 
 /* Box Model */

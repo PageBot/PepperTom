@@ -244,7 +244,7 @@ p.slideShowPager = False
 p.slideShowTimer = 4
 p.slideShowDuration = 0.7
 p.slideShowJsCallbackBefore = 'slideShowCaptionUpdate'
-sd.slideShowBackgroundColor = sd.theme.black
+sd.slideShowBackgroundColor = sd.theme.white
 p.slideShowCaptionMarginBottom = 80
 p.slideShowCaptionFontSize = 32
 p.slideShowCaptionFont = 'Upgrade-Book_Italic'
@@ -253,7 +253,7 @@ p.slideShowImages = (
     ('images/lookbook1/img_2458.jpg', None, 'Playing with card board, marker and crayons'),
     ('images/lookbook1/img_2361.jpg', None, 'Leafs and light'),
     ('images/lookbook1/claudia_schaduw.jpg', None, 'Thank you sunlight!'),
-    ('images/lookbook1/img_8629.jpg', None, 'Sure?!'),
+    ('images/lookbook1/img_86291.jpg', None, 'Sure?!'),
     ('images/lookbook1/img_8857+2.jpg', None, 'Beach fun, no lifeguards around... | MV'),
     ('images/lookbook1/img_8601.jpg', None, 'Impressed by Ursula von Rydingsvard and Alexander Calder at Storm King | NYC'),
     ('images/lookbook1/img_8437.jpg', None, 'Design thru light'),
@@ -288,7 +288,7 @@ p.slideShowPager_1 = False
 p.slideShowTimer_1 = 4
 p.slideShowDuration_1 = 0.7
 p.slideShowJsCallbackBefore_1 = 'slideShowCaptionUpdate_1'
-sd.slideShowBackgroundColor_1 = sd.theme.black
+sd.slideShowBackgroundColor_1 = sd.theme.white
 p.slideShowCaptionMarginBottom_1 = 80
 p.slideShowCaptionFontSize_1 = 32
 p.slideShowCaptionFont_1 = 'Upgrade-Book_Italic'
