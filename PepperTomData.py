@@ -51,7 +51,12 @@ sd.bodyFont = sd.fontFamily + '-Book'
 sd.logoFontFamily = 'PepperTom'
 sd.monoFontFamily = 'Courier New'
 sd.iconFontFamily = 'FontAwesome'
-sd.menuLinks = True # Force call to template._menuLinks()
+
+sd.footerFont = sd.fontFamily + '-Book_Italic'
+sd.footerFontSize = '1em'
+sd.footerColor = color(0.5) #sd.theme.getColor('main middle')
+
+sd.menuLinks = True # Force call to template._menuLinks() for all pages.
 
 sd.bodyText2Color = sd.theme.getColor('main text')
 sd.bodyText2Size = '1.3rem'
@@ -96,14 +101,14 @@ t2 = 'P+T invites you!'
 
 dk1 = 'Leftovers, from several editions of small series. Skirts, pants and scarves for high end stores, are waiting for you.'
 dk2 = 'I would love to bring all these beautiful handmade or semi- couture garments into the world. Together we will make an attractive price ; ) '
-dk3 = 'Call or <a href="mailto:claudia@petr.com?subject=Studio visit">email</a> me for an appointment in my studio in Delft. Come by yourself or with maximum two others. '
+dk3 = 'Call +31 6 4136 7689 or <a href="mailto:claudia@petr.com?subject=Studio visit">email</a> me for an appointment in my studio in Delft. Come by yourself or with maximum two others. '
 dk4 = 'The skirts and pants are all different, every piece is unique. there’s a variety of sizes from XXS to XL. Which one will be yours?!'
 dk5 = 'The scarves will always fit. Or as a gift for yourself or for someone else.'
 dk6 = 'Looking forward seeing you!'
 
 st1 = 'Leftovers, from several editions of small series'
 st2 = 'Together we will make an attractive price'
-st3 = 'Call or email me for an appointment in my studio in Delft'
+st3 = 'Call +31 6 4136 7689 or <a href="mailto:claudia@petr.com?subject=Studio visit">email</a> me for an appointment in my studio in Delft'
 st4 = 'Every piece is unique'
 st5 = 'The scarves will always fit'
 st6 = dk6
@@ -152,33 +157,29 @@ Handle with love and care, wash gently only hand-wash, ironing, do not bleach, n
 """
 
 p.bannerSlideShow = True
+sd.bannerFullHeight = '100vh' # Height of banner
+sd.bannerFullHeightMax980 = '90vh' # Height of banner in media
+sd.bannerFullHeightMax1280 = '80vh' # Height of banner in media
+sd.bannerHalfHeight = '50vh' # Half height of banner
 sd.bannerSlideShowHeadSize = '5rem' # Set to siteData
 sd.bannerSlideShowHeadSizeColor = sd.theme.getColor('lowest')
 sd.bannerSlideShowSubheadColor = sd.theme.getColor('lowest', a=0.85)
 
-p.bannerImage_1 = 'images/claar/IMG_7187.jpeg'
+p.bannerImage_1 = 'images/claar/IMG_7187-1.jpg'
 p.bannerTitle_1 = t1
 p.bannerSubtitle_1 = st1
 
-p.bannerImage_2 = 'images/studio/IMG_9581.jpg'
-p.bannerTitle_2 = t2
-p.bannerSubtitle_2 = st2
+p.bannerImage_2 = 'images/claar/IMG_6857.jpeg'
+p.bannerTitle_2 = t1
+p.bannerSubtitle_2 = st3
 
-p.bannerImage_3 = 'images/studio/IMG_9473.jpg'
-p.bannerTitle_3 = t1
-p.bannerSubtitle_3 = st3
+p.bannerImage_3 = 'images/claar/IMG_3295.jpeg'
+p.bannerTitle_3 = t2
+p.bannerSubtitle_3 = st2
 
-p.bannerImage_4 = 'images/studio/IMG_9557.jpg'
+p.bannerImage_4 = 'images/claar/IMG_6978.jpeg'
 p.bannerTitle_4 = t2
 p.bannerSubtitle_4 = st4
-
-p.bannerImage_5 = 'images/studio/IMG_9563.jpg'
-p.bannerTitle_5 = t1
-p.bannerSubtitle_5 = st5
-
-p.bannerImage_6 = 'images/studio/IMG_9566.jpg'
-p.bannerTitle_6 = t2
-p.bannerSubtitle_6 = st6
 
 # Page index, subscriptionForm
 
@@ -196,14 +197,14 @@ sd.articleSubheadColor = sd.articleHeadColor
 
 # Page index, article invitation
 
-p.articleImage_1 = 'images/claar/IMG_7187.jpeg'
+p.articleImage_1 = ('images/claar/IMG_7187-1.jpg', 'center top')
 p.articleSubhead_1 = 'Pepper+Tom pop-up! '
 p.articleHead_1 = 'Pepper+Tom is inviting you!'
 p.articleText_1 = articleInvitation
 
 # Page index, article 2
 
-p.articleImage_2 = 'images/studio/IMG_9563.jpg'
+p.articleImage_2 = 'images/skirts/img_9595.jpeg'
 p.articleSubhead_2 = 'Cool clothes. Designed&nbsp;styles.'
 p.articleHead_2 = 'Desirable fabrics & fashion'
 p.articleText_2 = articleFashion
@@ -219,7 +220,7 @@ p.articleFooter_3 = dk3
 
 # Page index, article 3
 
-p.articleImage_4 = 'images/skirts/IMG_0091_1.jpg'
+p.articleImage_4 = 'images/skirts/rok_lang_geelgroen_08.jpg'
 p.articleSubhead_4 = 'Slow fashion.'
 p.articleHead_4 = 'Skirts'
 p.articleText_4 = articleFashion
@@ -227,7 +228,7 @@ p.articleFooter_4 = dk4
 
 # Page index, article 4
 
-p.articleImage_5 = 'images/notes/IMG_0936.jpeg'
+p.articleImage_5 = 'images/pants/img_7254.jpeg'
 p.articleSubhead_5 = 'Pepper+Tom makes it work.'
 p.articleHead_5 = 'Pants'
 p.articleText_5 = articlePants
@@ -249,6 +250,7 @@ p.slideShowCaptionMarginBottom = 80
 p.slideShowCaptionFontSize = 32
 p.slideShowCaptionFont = 'Upgrade-Book_Italic'
 p.slideShowImages = (
+    # Name, position (e.g. 'center top'), caption
     ('images/lookbook1/img_7141.jpg', None, 'Love the contrast, love the matching | Menemsha MV'),
     ('images/lookbook1/img_2458.jpg', None, 'Playing with card board, marker and crayons'),
     ('images/lookbook1/img_2361.jpg', None, 'Leafs and light'),
@@ -329,7 +331,7 @@ sd.deckFontLeading = '1.2em'
 sd.deckFontColor = sd.theme.getColor('main text diap')
 
 p.deck = True # Trigger the template method
-p.deckImage = 'images/notes/IMG_0929.jpeg'
+p.deckImage = 'images/scarfs/scarf3.png'
 p.deckHead = dk1
 
 p.deck_1 = True # Trigger the template method

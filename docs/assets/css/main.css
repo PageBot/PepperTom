@@ -258,7 +258,11 @@
 	body {
 		-webkit-text-size-adjust: none;
 	}
-
+	footer {
+		font-family: "Upgrade-Book_Italic", sans-serif;
+		font-size: 1em;
+		color: #808080;
+	}
 /* Slide show */
 
 	.clearfix {
@@ -3757,7 +3761,6 @@
 			.grid-style > :nth-child(1n) {
 				width: calc(100% + 1rem);
 			}
-
 		}
 
 	.gallery {
@@ -3898,7 +3901,6 @@
 			.gallery > :nth-child(1n) {
 				width: calc(100% + 1rem);
 			}
-
 		}
 
 /* Header */
@@ -4056,7 +4058,6 @@
 			#header > a:last-child {
 				padding-right: 1em;
 			}
-
 	}
 
 	#header.reveal {
@@ -4104,7 +4105,6 @@
 	#header > h1 a {
 		font-size: 1em;
 	}
-
 }
 
 @media screen and (max-width: 480px) {
@@ -4112,7 +4112,6 @@
 	#header {
 		min-width: 320px;
 	}
-
 }
 
 /* Menu */
@@ -4224,7 +4223,6 @@
 					height: 4rem;
 					line-height: 4rem;
 				}
-
 			}
 
 		#menu.visible {
@@ -4241,7 +4239,6 @@
 			#menu {
 				padding: 2.5rem 1.75rem;
 			}
-
 		}
 
 /* Banner */
@@ -4475,24 +4472,22 @@
 
 			.banner.full {
 				padding: 0;
-				min-height: 75vh;
-				height: 75vh !important;
+				min-height: 80vh;
+				height: 80vh !important;
 			}
-
 		}
 
 		@media screen and (max-width: 980px) {
 
 			.banner.full {
 				padding: 0;
-				min-height: 50vh;
-				height: 50vh !important;
+				min-height: 90vh;
+				height: 90vh !important;
 			}
 
 			.banner > article {
 				background-attachment: scroll;
 			}
-
 		}
 
 		@media screen and (max-width: 736px) {
@@ -4535,7 +4530,6 @@
 			#main {
 				padding: 2rem 0 1rem 0 ; /* 3rem 0 1rem 0; */
 			}
-
 		}
 
 /* Footer */
@@ -4567,5 +4561,4 @@
 			#footer {
 				padding: 2rem 0 1rem 0; /* 3rem 0 1rem 0; */
 			}
-
 		}
