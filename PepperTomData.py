@@ -26,11 +26,13 @@ from pagebotnano_060.toolbox.color import color
 #    SomethingInTheAir
 #    WordlyWise
 
+TRACKING = '0.05rem'
+
 class PepperTomTheme(IntoTheWoods):
 
     logo1 = color(1)
-    logo2 = color(1, 0, 0) # Red
-    logo3 = color(0xEC842C)
+    logo2 = color(0xFF00C1) # Magenta bar of logo
+    logo3 = color(0xEC472C) # Orange bar of logo
 
 theme = PepperTomTheme()
 
@@ -52,8 +54,11 @@ sd.logoFontFamily = 'PepperTom'
 sd.monoFontFamily = 'Courier New'
 sd.iconFontFamily = 'FontAwesome'
 
+sd.pTracking = TRACKING
+
 sd.footerFont = sd.fontFamily + '-Book_Italic'
 sd.footerFontSize = '1em'
+sd.footerTracking = TRACKING
 sd.footerColor = color(0.5) #sd.theme.getColor('main middle')
 
 sd.menuLinks = True # Force call to template._menuLinks() for all pages.
@@ -101,17 +106,21 @@ t2 = 'P+T invites you!'
 
 dk1 = 'Leftovers, from several editions of small series. Skirts, pants and scarves for high end stores, are waiting for you.'
 dk2 = 'I would love to bring all these beautiful handmade or semi- couture garments into the world. Together we will make an attractive price ; ) '
-dk3 = 'Call +31 6 4136 7689 or <a href="mailto:claudia@petr.com?subject=Studio visit">email</a> me for an appointment in my studio in Delft. Come by yourself or with maximum two others. '
+dk3 = 'Call +31 6 41 367 689 or <a href="mailto:claudia@petr.com?subject=Studio visit">email</a> me for an appointment in my studio in Delft. Come by yourself or with maximum two others. '
 dk4 = 'The skirts and pants are all different, every piece is unique. there’s a variety of sizes from XXS to XL. Which one will be yours?!'
 dk5 = 'The scarves will always fit. Or as a gift for yourself or for someone else.'
 dk6 = 'Looking forward seeing you!'
 
 st1 = 'Leftovers, from several editions of small series'
 st2 = 'Together we will make an attractive price'
-st3 = 'Call +31 6 4136 7689 or <a href="mailto:claudia@petr.com?subject=Studio visit">email</a> me for an appointment in my studio in Delft'
+st3 = 'Call or email me for an appointment in my studio'
 st4 = 'Every piece is unique'
 st5 = 'The scarves will always fit'
 st6 = dk6
+
+pqImage = 'images/scarfs/scarf3.png'
+pqSubhead = 'Get in touch:'
+pqHead = 'Call +31 6 4136 7689 or <a href="mailto:claudia@petr.com?subject=Studio visit">email</a> me'
 
 articleInvitation = '%s\n\n%s\n\n%s\n\n%s\n\n%s\n\n%s\n\n' % (dk1, dk2, dk3, dk4, dk5, dk6)
 
@@ -157,13 +166,25 @@ Handle with love and care, wash gently only hand-wash, ironing, do not bleach, n
 """
 
 p.bannerSlideShow = True
+shadow = '4px 4px 6px rgba(0, 0, 0, 0.65)'
 sd.bannerFullHeight = '100vh' # Height of banner
 sd.bannerFullHeightMax980 = '90vh' # Height of banner in media
 sd.bannerFullHeightMax1280 = '80vh' # Height of banner in media
 sd.bannerHalfHeight = '50vh' # Half height of banner
+sd.bannerSlideShowHeadFont = sd.fontFamily + '-Medium_Italic' 
 sd.bannerSlideShowHeadSize = '5rem' # Set to siteData
-sd.bannerSlideShowHeadSizeColor = sd.theme.getColor('lowest')
+sd.bannerSlideShowHeadSizeColor = sd.theme.getColor('lowest', a=0.85)
+sd.bannerSlideShowHeadBackgroundColor = 'inherit'
+sd.bannerSlideShowHeadShadow = shadow
+sd.bannerSlideShowHeadPadding = '1rem'
+
+sd.bannerSlideShowSubheadFont = sd.fontFamily + '-Medium' 
+sd.bannerSlideShowSubheadSize = '1.5rem' # Set to siteData
 sd.bannerSlideShowSubheadColor = sd.theme.getColor('lowest', a=0.85)
+
+sd.bannerSlideShowSubheadBackgroundColor = color(0xEC472C, a=0.35).css # sd.theme.getColor('highest', a=0.35)
+sd.bannerSlideShowSubheadShadow = shadow
+sd.bannerSlideShowSubheadPadding = '1rem'
 
 p.bannerImage_1 = 'images/claar/IMG_7187-1.jpg'
 p.bannerTitle_1 = t1
@@ -335,17 +356,18 @@ p.deckImage = 'images/scarfs/scarf3.png'
 p.deckHead = dk1
 
 p.deck_1 = True # Trigger the template method
-p.deckImage_1 = 'images/notes/IMG_0929.jpeg'
+p.deckImage_1 = 'images/scarfs/scarf3.png'
 p.deckHead_1 = dk2
 
 # Page index, pullquote
 
 p.pullQuote = True # Trigger the template method
-p.pullQuoteImage = 'images/notes/IMG_0929.jpeg'
-p.pullQuoteSubhead = 'Pullquote subhead'
-p.pullQuoteHead = 'Pullquote heading' 
+p.pullQuoteImage = pqImage
+p.pullQuoteSubhead = pqSubhead
+p.pullQuoteHead = pqHead 
 
-p.gallery = True # Trigger the template._gallery method call
+p.gallery = False # Trigger the template._gallery method call
+'''
 p.galleryHead = 'Gallery head'
 p.gallerySubhead = 'Gallery subhead'
 p.galleryImage_1 = 'images/notes/IMG_0926.jpeg'
@@ -356,7 +378,7 @@ p.galleryImage_3 = 'images/notes/IMG_0933.jpeg'
 p.galleryImage_4 = 'images/notes/IMG_0934.jpeg'
 p.galleryImage_5 = 'images/notes/IMG_0935.jpeg'
 p.galleryImage_6 = 'images/notes/IMG_0936.jpeg'
-  
+'''
 
 #----------------------------------------------------------------------------- 
 p = sd.newPage(id='more-about-scarves', title='More about scarves', template='article')
@@ -371,30 +393,36 @@ p = sd.newPage(id='more-about-scarves', title='More about scarves', template='ar
 #   {{gallery}}
 
 p.articlePageHeader = True # Make the call to website._articlePageHeader(siteData, pageData) available.
-p.articlePageHeaderSubhead = 'Article page header subhead'
-p.articlePageHeaderTitle = 'Article page title'
+p.articlePageHeaderSubhead = 'Slow fashion'
+p.articlePageHeaderTitle = 'To all women: “Just keep dancing!”'
 
 p.article = True 
 p.articleSubhead = 'Article subhead'
 p.articleHead = 'More about scarves '
-p.articleText = """The shawl is a gift. By giving it, the giver wants to tell something to someone, “I give this unique shawl to my...”. For the receiver it is a way of expression. Depending on how the shawl is folded, emphasis is on either the alliterating typography or the decorative leaves. A new image every time as personal gift. To someone. Or to yourself. The scarves are hand made in a limited edition. 
-￼ ￼ ￼ ￼ ￼ ￼ 
-Scarf ‘Wonderful Woman’, ‘Lovely Lover’, ‘Marvelous Mother’ and ‘Fabulous Friend’ 
+p.articleText = """The shawl is a gift. By giving it, the giver wants to tell something to someone, “I give this unique shawl to my...”. For the receiver it is a way of expression. Depending on how the shawl is folded, emphasis is on either the alliterating typography or the decorative leaves. A new image every time as personal gift. To someone. Or to yourself. The scarves are hand made in a limited edition.
+
+Scarf: ‘Wonderful Woman’, ‘Lovely Lover’, ‘Marvelous Mother’ and ‘Fabulous Friend’ 
+
+<img width="100%" src="images/scarfs/orange_big.jpg">
 
 The scarves of Generous Gesture are always a gift; either to yourself or to someone else. A vibrant combination of color, ornaments and/or typography, they can be worn in many different ways.The shawls are produced in block-print, provided with an embroidered frame, the material is silk,  or a combination of silk and eco cotton. The shawls are made of Rajshahi Bengali silk, woven by the shot or changeant technique. If the fabric moves the color changes and is continuously different. The clarity of the colors is extraordinary! 
 
+<iframe width="100%" height="300px" src="https://www.youtube.com/embed/jSs3vJGHpRE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Scarf ’Gentle Gent’  These scarves are embroidered by hand. Double layered fabrics of silk and cotton. They measure 12 x 65 inch (30 x165 cm). The silver colored silk is made of the best Rajshahi Bengali silk. The off-white cotton is eco friendly produced. 
 
-The scarf says ‘Gentle Gent’ in Latin (English) and in Bengali. Jo de Baerdemaker a typedesigner from Belgium was very helpful with the Bengali type. Visit www.typojo.com to learn more about his work. 
+The scarf says ‘Gentle Gent’ in Latin (English) and in Bengali. Jo de Baerdemaker a typedesigner from Belgium was very helpful with the Bengali type. Visit <a href="http://www.typojo.com" target="external">www.typojo.com</a> to learn more about his work. 
+
+<img width="100%" src="images/scarfs/sjaal_nek.jpg">
 
 ## Wash instructions
 Handle with love and care. Wash gently by hand in hand-warm water with detergent for silk. Ironing. Do not bleach, no tumble-dry. 
 """
 
 p.pullQuote = True # Trigger the template method
-p.pullQuoteImage = 'images/notes/IMG_0929.jpeg'
-p.pullQuoteSubhead = 'Pullquote subhead 1'
-p.pullQuoteHead = 'Pullquote heading 1' 
+p.pullQuoteImage = pqImage
+p.pullQuoteSubhead = pqSubhead
+p.pullQuoteHead = pqHead 
 
 p.article_1 = False 
 p.pullQuote_1 = False
@@ -416,19 +444,23 @@ p = sd.newPage(id='more-about-skirts', title='More about skirts', template='arti
 #   {{gallery}}
 
 p.articlePageHeader = True # Make the call to website._articlePageHeader(siteData, pageData) available.
-p.articlePageHeaderSubhead = 'Article page header subhead'
-p.articlePageHeaderTitle = 'Article page title'
+p.articlePageHeaderSubhead = 'Slow fashion'
+p.articlePageHeaderTitle = 'To all women: “Just keep dancing!”'
 
 p.article = True 
-p.articleSubhead = 'Article subhead'
+p.articleSubhead = 'Supply chain collaboration'
 p.articleHead = 'Fabrics of the skirts'
 p.articleText = """Capsicum natuurstoffen is a Dutch initiative that uses eco cotton, handwoven in Kerala, India. This handwoven fabric consists of small inconsistencies, a characteristic of the handcrafted process. Capsicum has developed an environmentally friendly production process, they encourage their producers to improve working conditions and strive to pay their workers a fair wage. 
 
 In addition to the cottons, Capsicum promotes handwoven silk from Bangkok, Thailand, cooperating with a family business for over 30 years. 
 
+![](images/skirts/IMG_0347-1.jpg)
+
 Zippers are sourced from Italian brand Lampo, certifıed by Oeko-Tex Standard 100.
 
 Pepper+Tom source their eco cotton and ink from Ecological Textiles for their hand painted skirts. This fırm offers a wide range in fabrics, yarns and dyes that are manufactured and processed in a sustainable way. Ecological Textiles stands for environmentally sound production, fair trade and top quality. 
+
+<img width="100%" src="images/skirts/IMG_1328-min.jpg">
 
 From threads to fabrics, from moulding to materials our products comply with all European environmental, occupational safety laws and respect for the workers. 
 
@@ -439,23 +471,23 @@ Silk Wash gently only by hand, ironing, do not bleach, no tumble- dry. Handle wi
 """
 
 p.pullQuote = True # Trigger the template method
-p.pullQuoteImage = 'images/notes/IMG_0929.jpeg'
-p.pullQuoteSubhead = 'Pullquote subhead 1'
-p.pullQuoteHead = 'Pullquote heading 1' 
+p.pullQuoteImage = pqImage
+p.pullQuoteSubhead = pqSubhead
+p.pullQuoteHead = pqHead 
 
 p.article_1 = False 
 
 p.pullQuote_1 = True # Trigger the template method
-p.pullQuoteImage_1 = 'images/notes/IMG_0929.jpeg'
-p.pullQuoteSubhead_1 = 'Pullquote subhead 1'
-p.pullQuoteHead_1 = 'Pullquote heading 1' 
+p.pullQuoteImage = pqImage
+p.pullQuoteSubhead = pqSubhead
+p.pullQuoteHead = pqHead 
 
 p.article_2 = False
 p.pullQuote_2 = False
 p.gallery = False # Ignore the template._gallery method call
    
 #----------------------------------------------------------------------------- 
-p = sd.newPage(id='contact', title='Contact', template='article')
+p = sd.newPage(id='about', title='About', template='article')
 
 # Options in generic templates
 #   {{articlePageHeader}}
@@ -468,12 +500,28 @@ p = sd.newPage(id='contact', title='Contact', template='article')
 
 p.articlePageHeader = True # Make the call to website._articlePageHeader(siteData, pageData) available.
 p.articlePageHeaderSubhead = 'Let us know what you think'
-p.articlePageHeaderTitle = 'Contact'
+p.articlePageHeaderTitle = 'Studio'
 
 p.article = True 
-p.articleSubhead = 'Love to hear from you...'
-p.articleHead = 'Contact'
-p.articleText = """Love to hear from you... 
+p.articleSubhead = 'Child of the woods'
+p.articleHead = 'About me'
+p.articleText = """
+
+<img width="100%" src="images/contact/image-asset66.jpeg">
+
+“I am the child of the woods. We lived in a wooden house. At a dirt road. Endlessly tinker with acorns. Myself hiding under the ferns. Preferably in a sweater and pants. Wow, what a freedom, what a space. Always together with other kids.”
+
+“Watching is a verb,” my mother would say “look at the world. Look how beautiful that portrait has been painted.” I drew notebooks. Making atmospheres and environments, little peepshows. Then crept behind my mom’s Husqvarna sewing machine and sewed a wide comfy skirt. To climb into trees. 
+
+After three decades, running a studio from 1980 till 2010, it was time for something else. Claudia went looking and longing for the woods of her childhood. She found that feeling back on Martha's Vineyard in the USA, where she began drawing with childlike pleasure and painting. Arose leafs and fern motifs, inspired by her travels in Africa, South America and Asia. 
+
+She designed a series of scarves with type and motifs of leafs, produced by NGO Kumudini Welfare Trust in Bangladesh. In 2016, she started with a lot of spirit and fun Pepper+Tom. 
+
+Besides the products of Pepper+Tom, similar to work in all of the photo's on this website, design can be made by Claudia as a special custom assignment. Ask her: <a href="mailto:claudia@petr.com?subject=Contact Pepper+Tom">claudia@petr.com</a> 
+
+<img width="100%" src="images/contact/peppertom.png">
+
+## Looking forward seeing you... 
 
 Claudia Mens | claudia@petr.com 
 
@@ -485,52 +533,42 @@ The company is registered in the Chamber of Commerce (Handelsregister Kamer van 
 
 If you have a question not answered in this website, you can send an email (<a href="mailto:claudia@petr.com?subject=Contact Pepper+Tom">claudia@petr.com</a>) and we will respond to you as soon as we can. 
 
-## Studio 
+## Studio & partners
+
 Pepper+Tom is initiated by Claudia Mens, located at Rietveld 56, 2611 LM in Delft, The Netherlands. 
 
 Telephone mobile +31 6 41 367 689 or studio +31 15 887 1233 
 
-Email claudia@petr.com
+Email <a href="mailto:claudia@petr.com?subject=Studio visit">claudia@petr.com</a>
 
 Pepper+Tom would never exist without a team of dedicated people. 
 
-Petr van Blokland Typedesigner 
+Petr van Blokland *Typedesigner* 
 
-Kirsten Langmuur Graphic designer 
+Kirsten Langmuur *Graphic designer* 
 
-Liesbeth Oltmans Designer, consultant, trendwatcher 
+Liesbeth Oltmans *Consultant*
 
-Djoeke Delnooz, Claar van Liempt (& Lucy dog : ) Models 
+Djoeke Delnooz, Claar van Liemt (& Lucy dog : ) *Models* 
 
-Libby Ellis  (Tom) Creative director 
+Libby Ellis (Tom) *Creative director* 
 
-Sep Schaffers Text writer 
+Sep Schaffers *Text writer* 
 
-Petra Dijkgraaf Tailor 
+Petra Dijkgraaf *Tailor*
 
-Suzanne Liem Photographer 
+Suzanne Liem *Photographer* 
 
-Pendleton, Boweevil, Capsicum, Ecological Textiles and Bottger Fabric suppliers 
+Pendleton, Boweevil, Capsicum, Ecological Textiles and Bottger *Fabric suppliers*
 
-Claudia Mens (Pepper) Designer, founder Pepper+Tom
----
-## About Claudia Mens
-*“I am the child of the woods. We lived in a wooden house. At a dirt road. Endlessly tinker with acorns. Myself hiding under the ferns. Preferably in a sweater and pants. Wow, what a freedom, what a space. Always together with other kids.”*
-
-“Watching is a verb,” my mother would say “look at the world. Look how beautiful that portrait has been painted.” I drew notebooks. Making atmospheres and environments, little peepshows. Then crept behind my mom’s Husqvarna sewing machine and sewed a wide comfy skirt. To climb into trees. 
-
-After three decades, running a studio from 1980 till 2010, it was time for something else. Claudia went looking and longing for the woods of her childhood. She found that feeling back on Martha's Vineyard in the USA, where she began drawing with childlike pleasure and painting. Arose leafs and fern motifs, inspired by her travels in Africa, South America and Asia. 
-
-She designed a series of scarves with type and motifs of leafs, produced by NGO Kumudini Welfare Trust in Bangladesh. In 2016, she started with a lot of spirit and fun Pepper+Tom. 
-
-Besides the products of Pepper+Tom, similar to work in all of the photo's on this website, design can be made by Claudia as a special custom assignment. Ask her: <a href="mailto:claudia@petr.com?subject=Contact Pepper+Tom">claudia@petr.com</a> 
+Claudia Mens (Pepper) *Designer, founder Pepper+Tom*
 
 """
 
 p.pullQuote = True # Trigger the template method
-p.pullQuoteImage = 'images/notes/IMG_0929.jpeg'
-p.pullQuoteSubhead = 'Pullquote subhead 1'
-p.pullQuoteHead = 'Pullquote heading 1' 
+p.pullQuoteImage = pqImage
+p.pullQuoteSubhead = pqSubhead
+p.pullQuoteHead = pqHead 
 
 p.article_1 = False 
 p.pullQuote_1 = False

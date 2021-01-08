@@ -25,6 +25,7 @@ from pagebotnano_060.toolbox.markdown import parseMarkdownFile
 from pagebotnano_060.publications.website import Website
 
 PORT = 8888
+PORT = 80
 
 # Create a Website publications with this theme and templates
 #templates = TemplatedBinary()
