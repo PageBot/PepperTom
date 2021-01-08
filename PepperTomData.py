@@ -55,6 +55,7 @@ sd.monoFontFamily = 'Courier New'
 sd.iconFontFamily = 'FontAwesome'
 
 sd.pTracking = TRACKING
+sd.pLeading = '1.8rem'
 
 sd.footerFont = sd.fontFamily + '-Book_Italic'
 sd.footerFontSize = '1em'
