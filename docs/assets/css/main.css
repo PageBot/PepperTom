@@ -1891,7 +1891,7 @@
 
 	p {
 		margin: 0 0 2rem 0;
-		letter-spacing: 0.06rem;
+		letter-spacing: 0.05rem;
 	}
 
 		p.special {
@@ -4520,10 +4520,13 @@
 
 /* Deck */
 
+	.wrapper.style3.deck:before {
+		background-color: rgba(0, 0, 0, 0.00);
+	}
 	.wrapper.style3.deck .inner h1 {
 		font-family: Upgrade-Light_Italic;
 		font-size: 4rem;
-		color: #CCCCCC;
+		color: #FFF;
 		line-height: 1.2em;
 	}
 

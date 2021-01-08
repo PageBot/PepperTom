@@ -349,7 +349,8 @@ p.slideShowImages_1 = (
 sd.deckFont = 'Upgrade-Light_Italic'
 sd.deckFontSize = '4rem'
 sd.deckFontLeading = '1.2em'
-sd.deckFontColor = sd.theme.getColor('main text diap')
+sd.deckFontColor = '#FFF' # sd.theme.getColor('main text diap')
+sd.deckBackgroundColor = color(0, a=0).css
 
 p.deck = True # Trigger the template method
 p.deckImage = 'images/scarfs/scarf3.png'
