@@ -2017,7 +2017,7 @@
 	}
 
 	a {
-		color: #EC472C;
+		color: #FF00C1;
 	}
 
 	strong, b {
@@ -4431,7 +4431,7 @@
 				margin: 0;
 				letter-spacing: .25rem;
 				text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.65);
-				background: rgba(236, 71, 44, 0.35);
+				background: inherit;
 				padding: 1rem;
 			}
 

@@ -183,7 +183,7 @@ sd.bannerSlideShowSubheadFont = sd.fontFamily + '-Medium'
 sd.bannerSlideShowSubheadSize = '1.5rem' # Set to siteData
 sd.bannerSlideShowSubheadColor = sd.theme.getColor('lowest', a=0.85)
 
-sd.bannerSlideShowSubheadBackgroundColor = color(0xEC472C, a=0.35).css # sd.theme.getColor('highest', a=0.35)
+sd.bannerSlideShowSubheadBackgroundColor = 'inherit' #color(0xEC472C, a=0.35).css # sd.theme.getColor('highest', a=0.35)
 sd.bannerSlideShowSubheadShadow = shadow
 sd.bannerSlideShowSubheadPadding = '1rem'
 
@@ -489,7 +489,7 @@ p.pullQuote_2 = False
 p.gallery = False # Ignore the template._gallery method call
    
 #----------------------------------------------------------------------------- 
-p = sd.newPage(id='about', title='About', template='article')
+p = sd.newPage(id='more-about-studio', title='More about studio', template='article')
 
 # Options in generic templates
 #   {{articlePageHeader}}
