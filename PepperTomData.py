@@ -259,6 +259,7 @@ p.articleFooter_5 = dk5
 # Page index, slideShow
 
 p.slideShow = True # Turn it on
+# @@@ p.slideShowTitle = 'Lookbook'
 p.slideShowHeight = 500
 p.slideShowDynamicHeight = False
 p.slideShowCarousel = 2 # Number of slides
@@ -304,6 +305,7 @@ p.slideShowImages = (
 )
 
 p.slideShow_1 = True # Turn it on
+# @@@ p.slideShowTitle_1 = 'Lookbook'
 p.slideShowHeight_1 = 500
 p.slideShowDynamicHeight_1 = False
 p.slideShowCarousel_1 = 2 # Number of slides
@@ -395,11 +397,11 @@ p = sd.newPage(id='more-about-scarves', title='More about scarves', template='ar
 #   {{gallery}}
 
 p.articlePageHeader = True # Make the call to website._articlePageHeader(siteData, pageData) available.
-p.articlePageHeaderSubhead = 'Slow fashion'
-p.articlePageHeaderTitle = 'To all women: “Just keep dancing!”'
+p.articlePageHeaderSubhead = 'Kumudini Welfare Trust'
+p.articlePageHeaderTitle = 'Women of Bangladesh'
 
 p.article = True 
-p.articleSubhead = 'Article subhead'
+p.articleSubhead = 'Fruitful collaboration'
 p.articleHead = 'More about scarves '
 p.articleText = """The shawl is a gift. By giving it, the giver wants to tell something to someone, “I give this unique shawl to my...”. For the receiver it is a way of expression. Depending on how the shawl is folded, emphasis is on either the alliterating typography or the decorative leaves. A new image every time as personal gift. To someone. Or to yourself. The scarves are hand made in a limited edition.
 
@@ -489,7 +491,7 @@ p.pullQuote_2 = False
 p.gallery = False # Ignore the template._gallery method call
    
 #----------------------------------------------------------------------------- 
-p = sd.newPage(id='more-about-studio', title='More about studio', template='article')
+p = sd.newPage(id='more-about-studio', title='More about studio + me', template='article')
 
 # Options in generic templates
 #   {{articlePageHeader}}
@@ -501,13 +503,46 @@ p = sd.newPage(id='more-about-studio', title='More about studio', template='arti
 #   {{gallery}}
 
 p.articlePageHeader = True # Make the call to website._articlePageHeader(siteData, pageData) available.
-p.articlePageHeaderSubhead = 'Let us know what you think'
-p.articlePageHeaderTitle = 'Studio'
+p.articlePageHeaderSubhead = 'People project'
+p.articlePageHeaderTitle = 'Studio + me'
 
 p.article = True 
-p.articleSubhead = 'Child of the woods'
-p.articleHead = 'About me'
+p.articleSubhead = 'Joy together'
+p.articleHead = 'Focus groups'
 p.articleText = """
+
+Pepper+Tom feels privileged to work with a dedicated group of women. They give feedback, valuable information about what women want. We believe this is the best way to improve the design of the skirts. “The brand is not a product, it’s the relationship that you build with your customer. The product is just the start, a conversational piece.” Buy less, choose well.
+
+<img width="100%" src="images/focus/damesphotosa3delft2-21x42.jpg">
+<img width="100%" src="images/focus/damesphotosa3delft1-21x42.jpg">
+<img width="100%" src="images/focus/damesphotosa3-21x42.jpg">
+---
+## Studio + partners
+Pepper+Tom would never exist without a team of dedicated people:
+
+Petr van Blokland *Typedesigner* 
+
+Kirsten Langmuur *Graphic designer* 
+
+Liesbeth Oltmans *Consultant*
+
+Djoeke Delnooz, Claar van Liemt (+ Lucy dog : ) *Models* 
+
+Libby Ellis (Tom) *Creative director* 
+
+Sep Schaffers *Text writer* 
+
+Petra Dijkgraaf *Tailor*
+
+Suzanne Liem *Photographer* 
+
+Pendleton, Boweevil, Capsicum, Ecological Textiles and Bottger *Fabric suppliers*
+
+Claudia Mens (Pepper) *Designer, founder Pepper+Tom*
+
+Pepper+Tom is initiated by Claudia Mens, located at Rietveld 56, 2611 LM in Delft, The Netherlands.
+---
+## About me
 
 <img width="100%" src="images/contact/image-asset66.jpeg">
 
@@ -534,36 +569,6 @@ Rietveld 56 | 2611 LM Delft | The Netherlands
 The company is registered in the Chamber of Commerce (Handelsregister Kamer van Koophandel), by name Buro Petr van Blokland + Claudia Mens, number 27237753 Delft. 
 
 If you have a question not answered in this website, you can send an email (<a href="mailto:claudia@petr.com?subject=Contact Pepper+Tom">claudia@petr.com</a>) and we will respond to you as soon as we can. 
-
-## Studio & partners
-
-Pepper+Tom is initiated by Claudia Mens, located at Rietveld 56, 2611 LM in Delft, The Netherlands. 
-
-Telephone mobile +31 6 41 367 689 or studio +31 15 887 1233 
-
-Email <a href="mailto:claudia@petr.com?subject=Studio visit">claudia@petr.com</a>
-
-Pepper+Tom would never exist without a team of dedicated people. 
-
-Petr van Blokland *Typedesigner* 
-
-Kirsten Langmuur *Graphic designer* 
-
-Liesbeth Oltmans *Consultant*
-
-Djoeke Delnooz, Claar van Liemt (& Lucy dog : ) *Models* 
-
-Libby Ellis (Tom) *Creative director* 
-
-Sep Schaffers *Text writer* 
-
-Petra Dijkgraaf *Tailor*
-
-Suzanne Liem *Photographer* 
-
-Pendleton, Boweevil, Capsicum, Ecological Textiles and Bottger *Fabric suppliers*
-
-Claudia Mens (Pepper) *Designer, founder Pepper+Tom*
 
 """
 
