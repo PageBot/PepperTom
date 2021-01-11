@@ -262,7 +262,7 @@
 		font-family: "Upgrade-Book_Italic", sans-serif;
 		font-size: 1em;
 		color: #808080;
-		letter-spacing: 0.05rem;
+		letter-spacing: 0.025rem;
 	}
 /* Slide show */
 
@@ -275,11 +275,24 @@
 		grid-template-columns: 1fr; /* 2fr 1fr; */
 		column-gap: 10px;
 		row-gap: 10px;    
-		background-color: rgba(255, 255, 255, 0.85);
+		background-color: #808080;
+	}
+	.slideshowgroup .inner h2.slideshowtitle {
+		font-family: Upgrade-Light;
+		font-size: 5rem;
+		color: rgba(255, 255, 255, 0.85);
+		padding: 0px 36px 0px 36px;
+		letter-spacing: 0rem;
 	}
 	.slideshow {
 		margin: 0;
-		background-color: rgba(255, 255, 255, 0.85);
+		background-color: #808080;
+	}
+		@media screen and (max-width: 800px) {
+			.slideshowgroup {
+				width: 900px;
+				/*grid-template-columns: 4fr 1fr;*/ /* 2fr 1fr; */
+			}
 	}
 
 /* Box Model */
@@ -1891,7 +1904,7 @@
 
 	p {
 		margin: 0 0 2rem 0;
-		letter-spacing: 0.05rem;
+		letter-spacing: 0.025rem;
 		line-height: 1.8rem;
 	}
 
@@ -3341,7 +3354,7 @@
 
 		.wrapper.style3 {
 			background-color: #000;
-			color: #bfbfbf;
+			color: #E0E0E0; /* #bfbfbf; */
 			/*background-image: url(../../images/pic02.jpg); Defined by anchor in the page */
 			background-size: cover;
 			background-attachment: fixed;
@@ -3541,7 +3554,11 @@
 			}
 
 			.wrapper.style3 header p {
-				color: #999999;
+				color: #999999; 
+			}
+			.wrapper.style3 header p.pullquote {
+				font-family: "Upgrade-Medium"; /* Make parametric in PullQuote */
+				color: rgba(0, 0, 0, 0.5); /*#999999; */
 			}
 
 			.wrapper.style3 table tbody tr {
@@ -3575,11 +3592,11 @@
 
 			.wrapper.style3 p {
 				text-transform: uppercase;
-				font-size: .75rem;
+				font-size: 1rem; /* .75rem; */
 				font-weight: 300;
 				margin: 0 0 .5rem 0;
 				padding: 0 0 1rem 0;
-				letter-spacing: .25rem;
+				letter-spacing: 0.1rem;
 			}
 
 				.wrapper.style3 p:after {
@@ -3605,7 +3622,7 @@
 				transition-delay: 1.25s;
 				content: '';
 				display: block;
-				background-color: rgba(0, 0, 0, 0.95);
+				/*background-color: rgba(0, 0, 0, 0.95);*/
 				height: 100%;
 				left: 0;
 				opacity: 0.75;

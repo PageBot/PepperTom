@@ -26,7 +26,8 @@ from pagebotnano_060.toolbox.color import color
 #    SomethingInTheAir
 #    WordlyWise
 
-TRACKING = '0.05rem'
+TRACKING = '0.025rem'
+TRACKING_WIDE = '0.1rem'
 
 class PepperTomTheme(IntoTheWoods):
 
@@ -55,6 +56,7 @@ sd.monoFontFamily = 'Courier New'
 sd.iconFontFamily = 'FontAwesome'
 
 sd.pTracking = TRACKING
+sd.pTrackingWide = TRACKING_WIDE
 sd.pLeading = '1.8rem'
 
 sd.footerFont = sd.fontFamily + '-Book_Italic'
@@ -109,19 +111,19 @@ dk1 = 'Leftovers, from several editions of small series. Skirts, pants and scarv
 dk2 = 'I would love to bring all these beautiful handmade or semi- couture garments into the world. Together we will make an attractive price ; ) '
 dk3 = 'Call +31 6 41 367 689 or <a href="mailto:claudia@petr.com?subject=Studio visit">email</a> me for an appointment in my studio in Delft. Come by yourself or with maximum two others. '
 dk4 = 'The skirts and pants are all different, every piece is unique. there’s a variety of sizes from XXS to XL. Which one will be yours?!'
-dk5 = 'The scarves will always fit. Or as a gift for yourself or for someone else.'
+dk5 = 'The scarves will always fit. Either as a gift for yourself or for someone else.'
 dk6 = 'Looking forward seeing you!'
 
 st1 = 'Leftovers, from several editions of small series'
 st2 = 'Together we will make an attractive price'
-st3 = 'Call or email me for an appointment in my studio'
+st3 = 'Call or email for an appointment in the studio'
 st4 = 'Every piece is unique'
 st5 = 'The scarves will always fit'
 st6 = dk6
 
 pqImage = 'images/scarfs/scarf3.png'
-pqSubhead = 'Get in touch:'
-pqHead = 'Call +31 6 4136 7689 or <a href="mailto:claudia@petr.com?subject=Studio visit">email</a> me'
+pqSubhead = 'Get in touch'
+pqHead = 'Call +31 6 41 367 689 or <a href="mailto:claudia@petr.com?subject=Studio visit">email</a> me'
 
 articleInvitation = '%s\n\n%s\n\n%s\n\n%s\n\n%s\n\n%s\n\n' % (dk1, dk2, dk3, dk4, dk5, dk6)
 
@@ -259,7 +261,15 @@ p.articleFooter_5 = dk5
 # Page index, slideShow
 
 p.slideShow = True # Turn it on
-# @@@ p.slideShowTitle = 'Lookbook'
+p.slideShowTitle = 'Lookbook'
+# Works for all slide shows in CSS, does not need an item index
+sd.slideShowTitleFont = 'Upgrade-Light'
+sd.slideShowTitleFontSize = '5rem';
+sd.slideShowTitlePadding = '0px 36px 0px 36px'
+sd.slideShowTitleColor = sd.theme.white
+sd.slideShowTitleTracking = '0rem'
+sd.slideShowBackgroundColor = sd.theme.gray.css
+
 p.slideShowHeight = 500
 p.slideShowDynamicHeight = False
 p.slideShowCarousel = 2 # Number of slides
@@ -268,7 +278,6 @@ p.slideShowPager = False
 p.slideShowTimer = 4
 p.slideShowDuration = 0.7
 p.slideShowJsCallbackBefore = 'slideShowCaptionUpdate'
-sd.slideShowBackgroundColor = sd.theme.white
 p.slideShowCaptionMarginBottom = 80
 p.slideShowCaptionFontSize = 32
 p.slideShowCaptionFont = 'Upgrade-Book_Italic'
@@ -305,7 +314,7 @@ p.slideShowImages = (
 )
 
 p.slideShow_1 = True # Turn it on
-# @@@ p.slideShowTitle_1 = 'Lookbook'
+p.slideShowTitle_1 = 'Lookbook'
 p.slideShowHeight_1 = 500
 p.slideShowDynamicHeight_1 = False
 p.slideShowCarousel_1 = 2 # Number of slides
@@ -314,7 +323,6 @@ p.slideShowPager_1 = False
 p.slideShowTimer_1 = 4
 p.slideShowDuration_1 = 0.7
 p.slideShowJsCallbackBefore_1 = 'slideShowCaptionUpdate_1'
-sd.slideShowBackgroundColor_1 = sd.theme.white
 p.slideShowCaptionMarginBottom_1 = 80
 p.slideShowCaptionFontSize_1 = 32
 p.slideShowCaptionFont_1 = 'Upgrade-Book_Italic'
@@ -417,10 +425,11 @@ Scarf ’Gentle Gent’  These scarves are embroidered by hand. Double layer
 
 The scarf says ‘Gentle Gent’ in Latin (English) and in Bengali. Jo de Baerdemaker a typedesigner from Belgium was very helpful with the Bengali type. Visit <a href="http://www.typojo.com" target="external">www.typojo.com</a> to learn more about his work. 
 
-<img width="100%" src="images/scarfs/sjaal_nek.jpg">
+<img width="100%" src="images/scarfs/scarf-silver-03.jpg">
 
 ## Wash instructions
-Handle with love and care. Wash gently by hand in hand-warm water with detergent for silk. Ironing. Do not bleach, no tumble-dry. 
+<p>Handle with love and care. Wash gently by hand in hand-warm water with detergent for silk. Ironing. Do not bleach, no tumble-dry.</p>
+
 """
 
 p.pullQuote = True # Trigger the template method
