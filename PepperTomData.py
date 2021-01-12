@@ -160,7 +160,7 @@ All skirts have a A-line. There are three different lengths. Skirts with and wit
 
 articlePants = """The fabric of these pants has been produced by the best craftsmen of Kumudini Welfare Trust of Bengal. Beautiful women who live in Dinajpur, a poor region in the northwest of Bangladesh, have mastered the traditional embroidery technique Nakshi Kantha. This is a running stitch technique entirely embroidered by hand. The fabrics of the pants are or cotton double layered, or a combination of cotton and silk. The fabrics are natural dyed. Small inconsistencies are characteristics of the handcrafted process. The pants are feminine and cool. You can wear them chic, classic and casual, They will mix and match with your wardrobe for almost every occasion. We hope you will wear them with joy and happiness.
 
-All pants have wide legs. The pants with or without a waistband. All very comfortable to wear. Iconic, centerpiece items:Timeless!
+All pants have wide legs, with or without a waistband. All very comfortable to wear. Iconic, centerpiece items:Timeless!
 
 The pants are handmade in a Dutch atelier. 
 
