@@ -463,7 +463,7 @@ p.articlePageHeaderTitle = 'To all women: “Just keep dancing!”'
 p.article = True 
 p.articleSubhead = 'Supply chain collaboration'
 p.articleHead = 'Fabrics of the skirts'
-p.articleText = """Capsicum natuurstoffen is a Dutch initiative that uses eco cotton, handwoven in Kerala, India. This handwoven fabric consists of small inconsistencies, a characteristic of the handcrafted process. Capsicum has developed an environmentally friendly production process, they encourage their producers to improve working conditions and strive to pay their workers a fair wage. 
+p.articleText = """Capsicum natuurstoffen is a Dutch initiative that uses eco cotton, handwoven in Kerala, India. This handwoven fabric contains small inconsistencies, a characteristic of the handcrafted process. Capsicum has developed an environmentally friendly production process, they encourage their producers to improve working conditions and strive to pay their workers a fair wage. 
 
 In addition to the cottons, Capsicum promotes handwoven silk from Bangkok, Thailand, cooperating with a family business for over 30 years. 
 
