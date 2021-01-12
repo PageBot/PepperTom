@@ -107,14 +107,14 @@ p = sd.newPage(id='index', title='Home', template='index')
 t1 = 'Pepper+Tom pop-up!'
 t2 = 'P+T invites you!'
 
-dk1 = 'Leftovers, from several editions of small series. Skirts, pants and scarves for high end stores, are waiting for you.'
-dk2 = 'I would love to bring all these beautiful handmade or semi- couture garments into the world. Together we will make an attractive price ; ) '
+dk1 = 'Last pieces from several editions of small series. Skirts, pants and scarves for high end stores, are waiting for you.'
+dk2 = 'I would love to bring all these beautiful handmade or semi- couture garments into the world for attractive prices :)'
 dk3 = 'Call +31 6 41 367 689 or <a href="mailto:claudia@petr.com?subject=Studio visit">email</a> me for an appointment in my studio in Delft. Come by yourself or with maximum two others. '
 dk4 = 'The skirts and pants are all different, every piece is unique. there’s a variety of sizes from XXS to XL. Which one will be yours?!'
 dk5 = 'The scarves will always fit. Either as a gift for yourself or for someone else.'
 dk6 = 'Looking forward seeing you!'
 
-st1 = 'Leftovers, from several editions of small series'
+st1 = 'Clear out from several editions of small series'
 st2 = 'Together we will make an attractive price'
 st3 = 'Call or email for an appointment in the studio'
 st4 = 'Every piece is unique'
@@ -131,7 +131,7 @@ articleFashion = """Where do clothing and fabrics come from? Who made them and u
 
 Wouldn’t it be nice to wear clothes where it is clear who made them? Where the conditions of fabrication are good and the trade is fair? 
 
-Pepper+Tom wants that, sharing experience, collaborating with partners in the clothing chain, who think and act the same way. To make the production, resources and materials traceable for every garment. Pepper+Tom supports the idea of ‘true cost’ and ‘slow fashion’, adding to the pleasure of wearing the clothes.
+Pepper+Tom wants that sharing experience, collaborating with partners in the clothing chain who think and act the same way. To make the production, resources and materials traceable for every garment. Pepper+Tom supports the idea of ‘true cost’ and ‘slow fashion’, adding to the pleasure of wearing the clothes.
 """
 
 articleScarves = """The scarves are the result of many peoples’ work and creativity from rural Bangladesh to the cities of the Netherlands and the shores of the United States. 
@@ -144,7 +144,7 @@ Under the name of Generous Gesture, the scarves have won a Bronze Award for the 
 
 Generous Gesture has been nominated for the German Design Award 2012. 
 
-Generous Gesture is a people project. Every piece we make is 100% fair trade. The principle op Generous Gesture is creating fair trade with sustainable products. Through an exchange of ideas and skills we create a win-win situation for all concerned parties. 
+Generous Gesture is a people project. Every piece we make is 100% fair trade. The principle of Generous Gesture is creating fair trade with sustainable products. Through an exchange of ideas and skills we create a win-win situation for all concerned parties. 
 """
 
 articleSkirts = """Pepper+Tom skirts are perfect basic items that should not be missing in your wardrobe. They are designed in various sizes, fabrics (cotton, silk and wool) different lengths and delicately fınished with a colored zipper. The skirts are made from sustainable fabrics. Semi couture by a Dutch Atelier. 
@@ -162,10 +162,10 @@ articlePants = """The fabric of these pants has been produced by the best crafts
 
 All pants have wide legs. The pants with or without a waistband. All very comfortable to wear. Iconic, centerpiece items:Timeless!
 
-The pants are produced in a Dutch atelier, piece by piece. 
+The pants are handmade in a Dutch atelier. 
 
 ## Wash instruction 
-Handle with love and care, wash gently only hand-wash, ironing, do not bleach, no tumble-dry, chemical cleaning.
+Handle with love and care, wash gently only hand-wash, ironing, do not bleach, no tumble-dry, chemical cleaning possible (not necessary).
 """
 
 p.bannerSlideShow = True
@@ -555,7 +555,7 @@ Pepper+Tom is initiated by Claudia Mens, located at Rietveld 56, 2611 LM in Delf
 
 <img width="100%" src="images/contact/image-asset66.jpeg">
 
-“I am the child of the woods. We lived in a wooden house. At a dirt road. Endlessly tinker with acorns. Myself hiding under the ferns. Preferably in a sweater and pants. Wow, what a freedom, what a space. Always together with other kids.”
+“I am the child of the woods. We lived in a wooden house, at a dirt road. Endlessly tinkering with acorns. Myself hiding under the ferns. Preferably in a sweater and pants. Wow, what a freedom, what a space. Always together with other kids.”
 
 “Watching is a verb,” my mother would say “look at the world. Look how beautiful that portrait has been painted.” I drew notebooks. Making atmospheres and environments, little peepshows. Then crept behind my mom’s Husqvarna sewing machine and sewed a wide comfy skirt. To climb into trees. 
 
